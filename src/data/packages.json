@@ -1,0 +1,133 @@
+[
+  {
+    "id": "coastal-bliss",
+    "title": "Coastal Bliss Escape",
+    "tagline": "Sun-drenched shores, turquoise waters, and barefoot luxury",
+    "description": "Immerse yourself in the untouched beauty of Sri Lanka's southern coastline. From the colonial charm of Galle Fort to the whale-watching waters of Mirissa, this journey is pure coastal poetry. Stay in handpicked boutique resorts steps from the ocean.",
+    "price": 1890,
+    "currency": "USD",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "badge": "Best Seller",
+    "category": "Beach",
+    "featured": true,
+    "image": "/images/hero.png",
+    "highlights": [
+      "Galle Fort sunset walk",
+      "Whale watching at Mirissa",
+      "Snorkelling at Pigeon Island",
+      "Cooking class with local family",
+      "Sunset catamaran cruise"
+    ],
+    "included": [
+      "6 nights boutique accommodation",
+      "Daily breakfast",
+      "Private AC transfer",
+      "English-speaking guide",
+      "Whale watching excursion",
+      "Airport transfers"
+    ],
+    "maxGroupSize": 12,
+    "difficulty": "Easy",
+    "startLocation": "Colombo"
+  },
+  {
+    "id": "cultural-heartlands",
+    "title": "Cultural Heartlands Journey",
+    "tagline": "Ancient kingdoms, sacred temples, and timeless traditions",
+    "description": "Travel through the UNESCO-listed Cultural Triangle and discover the soul of Sri Lanka. Explore the rock fortress of Sigiriya, bathe in the moonlit glow of ancient Anuradhapura, and witness the living traditions of Kandy — the last royal capital.",
+    "price": 2350,
+    "currency": "USD",
+    "duration": "10 Days / 9 Nights",
+    "durationDays": 10,
+    "badge": "Most Popular",
+    "category": "Cultural",
+    "featured": true,
+    "image": "/images/hero.png",
+    "highlights": [
+      "Sigiriya Rock Fortress sunrise climb",
+      "Dambulla Cave Temple frescos",
+      "Polonnaruwa ancient city tour",
+      "Kandy Esala Perahera (seasonal)",
+      "Temple of the Tooth ceremony",
+      "Traditional Kandyan dance"
+    ],
+    "included": [
+      "9 nights heritage hotels",
+      "Daily breakfast & dinner",
+      "Private AC vehicle",
+      "Expert cultural guide",
+      "All entrance fees",
+      "Airport transfers"
+    ],
+    "maxGroupSize": 10,
+    "difficulty": "Moderate",
+    "startLocation": "Colombo"
+  },
+  {
+    "id": "hill-country-adventure",
+    "title": "Hill Country Adventure",
+    "tagline": "Misty peaks, endless tea estates, and exhilarating trails",
+    "description": "Venture into the emerald highlands of central Sri Lanka where cascading waterfalls and colonial-era tea plantations define the landscape. Trek through Horton Plains, ride the legendary Ella train, and breathe the crisp mountain air of Nuwara Eliya.",
+    "price": 1650,
+    "currency": "USD",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "badge": "Adventure Pick",
+    "category": "Adventure",
+    "featured": true,
+    "image": "/images/hero.png",
+    "highlights": [
+      "Ella Rock sunrise hike",
+      "Nine Arch Bridge at dawn",
+      "Horton Plains & World's End trek",
+      "Tea estate plantation tour & tasting",
+      "Little Adam's Peak trail",
+      "Scenic Kandy-Ella train journey"
+    ],
+    "included": [
+      "5 nights mountain lodges",
+      "Daily breakfast",
+      "Private transfer to base",
+      "Adventure guide",
+      "Train tickets",
+      "National park entrance fees"
+    ],
+    "maxGroupSize": 8,
+    "difficulty": "Moderate–Challenging",
+    "startLocation": "Kandy"
+  },
+  {
+    "id": "wellness-serenity",
+    "title": "Ayurvedic Wellness Retreat",
+    "tagline": "Ancient healing, pure surrender, and total renewal",
+    "description": "Rooted in 3,000 years of Ayurvedic wisdom, this deeply restorative journey combines authentic treatments with serene natural surroundings. From personalised wellness consultations to yoga at dawn and herbal steam therapies — come to restore, not merely rest.",
+    "price": 2800,
+    "currency": "USD",
+    "duration": "8 Days / 7 Nights",
+    "durationDays": 8,
+    "badge": "Premium",
+    "category": "Wellness",
+    "featured": true,
+    "image": "/images/hero.png",
+    "highlights": [
+      "Personalised Ayurvedic consultation",
+      "Daily yoga & meditation sessions",
+      "Herbal steam & oil treatments",
+      "Forest bathing & nature walks",
+      "Organic Ayurvedic cuisine",
+      "Sound healing ceremony"
+    ],
+    "included": [
+      "7 nights wellness resort",
+      "All Ayurvedic treatments",
+      "Full board organic meals",
+      "Wellness consultant",
+      "Yoga & meditation classes",
+      "Airport transfers"
+    ],
+    "maxGroupSize": 6,
+    "difficulty": "Easy",
+    "startLocation": "Bentota"
+  }
+]

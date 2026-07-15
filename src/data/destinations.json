@@ -1,0 +1,413 @@
+[
+  {
+    "slug": "sigiriya",
+    "name": "Sigiriya",
+    "tagline": "Lion Rock Citadel",
+    "region": "Cultural Triangle",
+    "summary": "Rising 200 metres above the surrounding jungle, Sigiriya is one of the world's most dramatic archaeological sites. Built by King Kashyapa in the 5th century, the rock fortress served as both a royal palace and a military stronghold. Today, UNESCO-listed and awe-inspiring, Sigiriya rewards those who climb its ancient stairways with panoramic views across Sri Lanka's cultural heartland.",
+    "facts": [
+      {
+        "label": "UNESCO",
+        "value": "World Heritage Site"
+      },
+      {
+        "label": "Altitude",
+        "value": "200 m"
+      },
+      {
+        "label": "Best Time",
+        "value": "Jan – Apr"
+      },
+      {
+        "label": "Region",
+        "value": "North Central"
+      },
+      {
+        "label": "Built",
+        "value": "5th Century AD"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Moderate Climb"
+      }
+    ],
+    "heroImage": "/content/destinations/sigiriya/images/summary.png",
+    "heroGallery": [
+      "/content/destinations/sigiriya/images/hero-loop/sg-1.png",
+      "/content/destinations/sigiriya/images/hero-loop/sg-2.png",
+      "/content/destinations/sigiriya/images/hero-loop/sg-3.png"
+    ],
+    "heroVideo": "https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-temple-site-on-top-of-a-mountain-41451-large.mp4",
+    "preferredHeroType": "video",
+    "color": "#D4AF37",
+    "packageIds": [
+      "cultural-heartlands"
+    ],
+    "nearbyPlaces": [
+      {
+        "slug": "dambulla",
+        "name": "Dambulla",
+        "subtitle": "Cave Temple of the Golden Rock",
+        "summary": "Five exquisite cave temples hewn into a granite outcrop, adorned with 153 Buddha statues and 2,100 square metres of ancient fresco paintings — a living meditation on devotion.",
+        "longDescription": "The Dambulla Cave Temple is a vast isolated rock mass where King Valagamba took refuge in the 1st century BC. He later transformed these caves into magnificent temples. Today, it stands as the most impressive cave temple complex in Sri Lanka, boasting five separate caves containing 153 Buddha statues, 3 statues of Sri Lankan kings, and 4 statues of gods and goddesses. The murals, covering an area of 2,100 square metres, depict the life of Lord Buddha and milestones in Sinhalese history.",
+        "image": "https://images.unsplash.com/photo-1578490284451-46387084534e?auto=format&fit=crop&q=80&w=800",
+        "lineArt": "/content/destinations/sigiriya/images/line-arts/dambulla.png",
+        "video": "/content/destinations/sigiriya/videos/dambulla.mp4",
+        "side": "right",
+        "packageIds": [
+          "cultural-heartlands"
+        ]
+      },
+      {
+        "slug": "polonnaruwa",
+        "name": "Polonnaruwa",
+        "subtitle": "The Ruined Medieval Capital",
+        "summary": "Wander through the perfectly preserved ruins of Sri Lanka's second ancient kingdom — colossal stone Buddhas, royal bathhouses, and irrigation tanks speak of a civilisation at its zenith.",
+        "longDescription": "Polonnaruwa was the second capital of Sri Lanka after the destruction of Anuradhapura in 993. It comprises, besides the Brahmanic monuments built by the Cholas, the monumental ruins of the fabulous garden-city created by Parakramabahu I in the 12th century. The Gal Vihara rock temple, with its four massive Buddha figures carved out of a single granite wall, remains one of the most sublime examples of Sinhalese stone carving.",
+        "image": "https://images.unsplash.com/photo-1605666807895-ec12f7188701?auto=format&fit=crop&q=80&w=800",
+        "lineArt": "/content/destinations/sigiriya/images/line-arts/polonnaruwa.png",
+        "video": "/content/destinations/sigiriya/videos/polonnaruwa.mp4",
+        "side": "left",
+        "packageIds": [
+          "cultural-heartlands"
+        ]
+      },
+      {
+        "slug": "minneriya",
+        "name": "Minneriya",
+        "subtitle": "The Gathering of Giants",
+        "summary": "Witness the largest concentration of wild Asian elephants on Earth at Minneriya National Park — hundreds of elephants converging at the ancient reservoir in what locals call 'The Gathering'.",
+        "longDescription": "Minneriya National Park is world-renowned for 'The Gathering' of wild Asian elephants. During the dry season (peak August-September), hundreds of elephants migrate from surrounding areas to the receding banks of the Minneriya Tank—an ancient reservoir built by King Mahasen. It is a spectacle of social interaction, bathing, and grazing that is considered one of the most incredible wildlife experiences in the world.",
+        "image": "",
+        "lineArt": "/content/destinations/sigiriya/images/line-arts/minneriya.png",
+        "video": "/content/destinations/sigiriya/videos/minneriya.mp4",
+        "side": "right",
+        "packageIds": [
+          "cultural-heartlands"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "kandy",
+    "name": "Kandy",
+    "tagline": "The Sacred Vale",
+    "region": "Central Highlands",
+    "summary": "Cradled in a bowl of mist-wrapped hills, Kandy is the spiritual and cultural capital of Sri Lanka. Home to the Temple of the Sacred Tooth Relic — one of Buddhism's most venerated shrines — the city pulses with pageantry, traditional dance, and ancient ceremony. The last royal capital of the Sinhalese kingdom resisted colonial rule for centuries, and its pride is still palpable in every street.",
+    "facts": [
+      {
+        "label": "UNESCO",
+        "value": "World Heritage Site"
+      },
+      {
+        "label": "Elevation",
+        "value": "465 m"
+      },
+      {
+        "label": "Best Time",
+        "value": "Jan – Apr"
+      },
+      {
+        "label": "Region",
+        "value": "Central Province"
+      },
+      {
+        "label": "Known For",
+        "value": "Temple of the Tooth"
+      },
+      {
+        "label": "Festival",
+        "value": "Esala Perahera"
+      }
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1544984243-752762a45d07?auto=format&fit=crop&q=80&w=1920",
+    "heroVideo": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+    "color": "#1E3A8A",
+    "packageIds": [
+      "cultural-heartlands",
+      "hill-country-adventure"
+    ],
+    "nearbyPlaces": [
+      {
+        "slug": "pinnawala",
+        "name": "Pinnawala",
+        "subtitle": "Elephant Orphanage",
+        "summary": "A sanctuary that has rescued and rehabilitated orphaned elephants since 1975. Watch a herd of over 90 elephants bathe in the Maha Oya River — some of the most spectacular wildlife footage in Asia.",
+        "longDescription": "Established in 1975, the Pinnawala Elephant Orphanage was created to protect and care for many of the orphaned unweaned wild elephants found wandering in and near the forests of Sri Lanka. It has since become a major research and conservation center. The daily ritual of leading the herd to the river for their bath is a deeply moving experience that highlights the bond between these majestic creatures and their caretakers.",
+        "image": "https://images.unsplash.com/photo-1540202404-a2f29016b523?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-jungle-with-many-trees-31295-large.mp4",
+        "side": "right",
+        "packageIds": [
+          "cultural-heartlands"
+        ]
+      },
+      {
+        "slug": "peradeniya",
+        "name": "Peradeniya",
+        "subtitle": "Royal Botanical Gardens",
+        "summary": "One of Asia's finest botanical gardens, spreading across 147 acres along the Mahaweli River. Giant Java fig trees, orchid houses, and a canopy walk through a living collection of 4,000 plant species.",
+        "longDescription": "The Royal Botanical Gardens at Peradeniya date back to 1371, when King Wickramabahu III kept court here. It was formally established as a botanical garden in 1821. The gardens include more than 4,000 species of plants, including orchids, spices, medicinal plants, and palm trees. The Great Lawn, with its iconic Giant Java Fig tree spreading across its center, is a favourite spot for both locals and international botanists.",
+        "image": "https://images.unsplash.com/photo-1523544545175-92e04b96d26b?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+        "side": "left",
+        "packageIds": [
+          "cultural-heartlands",
+          "hill-country-adventure"
+        ]
+      },
+      {
+        "slug": "adams-peak",
+        "name": "Adam's Peak",
+        "subtitle": "Sri Pada — The Sacred Footprint",
+        "summary": "A mountain revered by pilgrims of four faiths. The pre-dawn climb through a chain of ancient lanterns leads to a sunrise so breathtaking that the shadow of the peak forms a perfect triangle on the clouds below.",
+        "longDescription": "Adam's Peak is a 2,243m tall conical mountain located in central Sri Lanka. It is well known for the Sri Pada, i.e., 'sacred footprint', a 1.8m rock formation near the summit. For Buddhists, the footprint is that of the Buddha, for Hindus that of Shiva and for Muslims and Christians that of Adam, or that of St. Thomas. The pilgrimage season starts on the full moon day of December and ends on the full moon day of May.",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+        "side": "right",
+        "packageIds": [
+          "hill-country-adventure"
+        ]
+      },
+      {
+        "slug": "knuckles",
+        "name": "Knuckles",
+        "subtitle": "The Misty Massif",
+        "summary": "A UNESCO World Heritage wilderness of cloud forests, dwarf mountains, and hidden waterfalls. The Knuckles range is named for its resemblance to a clenched fist — five peaks rising through perpetual mist.",
+        "longDescription": "The Knuckles Mountain Range is a massif in central Sri Lanka, lying north of Kandy. It takes its name from a series of recumbent folds and peaks in the west of the massif that resemble the knuckles of a clenched fist when viewed from certain locations. The area is a UNESCO World Heritage Site and a biodiversity hotspot, home to more than 34% of Sri Lanka's endemic flora and fauna, including the elusive Sri Lankan leopard and the purple-faced langur.",
+        "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+        "side": "left",
+        "packageIds": [
+          "hill-country-adventure"
+        ]
+      },
+      {
+        "slug": "test",
+        "name": "test",
+        "subtitle": "test",
+        "summary": "test",
+        "longDescription": "test",
+        "image": "",
+        "video": "",
+        "side": "right",
+        "packageIds": [
+          "coastal-bliss"
+        ]
+      },
+      {
+        "slug": "test2",
+        "name": "test2",
+        "subtitle": "test",
+        "summary": "test",
+        "longDescription": "test",
+        "image": "/content/destinations/kandy/images/nearby_1781647215249_Amazing-ruins-and-temples-to-explore-in-the-Ancient-City-of-Polonnaruwa-1170x600.jpg",
+        "video": "",
+        "side": "right",
+        "packageIds": [
+          "cultural-heartlands"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ella",
+    "name": "Ella",
+    "tagline": "Highland Greens",
+    "region": "Uva Highlands",
+    "summary": "Perched at 1,041 metres above sea level, Ella is Sri Lanka's most beloved hill town — a pocket of emerald serenity framed by the iconic Nine Arch Bridge and the misty Little Adam's Peak. The legendary train journey from Kandy, winding through tunnels and tea estates, is widely considered one of the world's most scenic rail routes. Ella is where adventure meets pure, uncomplicated beauty.",
+    "facts": [
+      {
+        "label": "Elevation",
+        "value": "1,041 m"
+      },
+      {
+        "label": "Best Time",
+        "value": "Jan – Mar, Jun – Sep"
+      },
+      {
+        "label": "Region",
+        "value": "Uva Province"
+      },
+      {
+        "label": "Known For",
+        "value": "Nine Arch Bridge"
+      },
+      {
+        "label": "Train Route",
+        "value": "Kandy → Ella"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy–Moderate"
+      }
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1523544545175-92e04b96d26b?auto=format&fit=crop&q=80&w=1920",
+    "heroVideo": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+    "color": "#059669",
+    "packageIds": [
+      "hill-country-adventure"
+    ],
+    "nearbyPlaces": [
+      {
+        "slug": "nine-arch-bridge",
+        "name": "Nine Arch Bridge",
+        "subtitle": "The Bridge in the Sky",
+        "summary": "Built entirely without steel during World War I, this colonial masterpiece of brick and local stone arches over the Demodara valley. Trains pass through the mist at dawn — a photograph that defines Sri Lanka.",
+        "longDescription": "The Nine Arch Bridge in Ella is one of the best examples of colonial-era railway construction in the country. The bridge was built at Gotuwala between the Ella and Demodara stations during the British Colonial period. Locally known as 'Ahash Namaye Palama' (Nine skies bridge), it is 91 meters long and 24 meters high. The bridge is particularly famous because it was constructed using only bricks, stone, and cement without any steel.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800",
+        "lineArt": "/images/line-art/nine-arch-bridge.png",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+        "side": "right",
+        "packageIds": [
+          "hill-country-adventure"
+        ]
+      },
+      {
+        "slug": "horton-plains",
+        "name": "Horton Plains",
+        "subtitle": "World's End & Cloud Forest",
+        "summary": "A hauntingly beautiful plateau at 2,100 metres, cloaked in cloud forest and montane grassland. At World's End, the plateau drops 870 metres in a sheer cliff — on clear mornings, you can see the southern coast.",
+        "longDescription": "Horton Plains National Park is a protected area in the central highlands of Sri Lanka and is covered by montane grassland and cloud forest. It is situated at an altitude of 2,100–2,300 metres and is rich in biodiversity. Many species found here are endemic to the region. The plateau comes to a sudden end at 'World's End', a stunning escarpment that plunges 880m down to the valley below, offering spectacular views on clear days.",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+        "side": "left",
+        "packageIds": [
+          "hill-country-adventure"
+        ]
+      },
+      {
+        "slug": "nuwara-eliya",
+        "name": "Nuwara Eliya",
+        "subtitle": "Little England of Sri Lanka",
+        "summary": "A colonial hill station at 1,868 metres where Tudor houses, manicured rose gardens, and misty racecourses survive from the British era. Surrounded by emerald tea estates, it is the coolest and most English corner of a tropical island.",
+        "longDescription": "Nuwara Eliya, meaning 'City of Light', is a city in the tea country hills of central Sri Lanka. The naturally landscaped Hakgala Botanical Gardens displays roses and tree ferns, and harbors monkeys and blue magpies. Nearby Seetha Amman Temple, a colorful Hindu shrine, is decorated with religious figures. Densely forested Victoria Park, in the center of the town, is a popular spot for birdwatching and relaxing.",
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-with-low-clouds-and-mist-34531-large.mp4",
+        "side": "right",
+        "packageIds": [
+          "hill-country-adventure"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "galle",
+    "name": "Galle",
+    "tagline": "Ocean Bastion",
+    "region": "Southern Coast",
+    "summary": "Galle's 36-hectare fort — a UNESCO World Heritage Site — stands as perhaps the finest example of a fortified city built by Europeans in South and Southeast Asia. Dutch colonial buildings line cobblestone streets where artisan boutiques, lighthouse sunsets, and seafood stalls coexist in perfect harmony. Just beyond the ramparts, turquoise waves pound the coast in both directions — north to empty beaches, south to the whale-watching seas of Mirissa.",
+    "facts": [
+      {
+        "label": "UNESCO",
+        "value": "World Heritage Site"
+      },
+      {
+        "label": "Built",
+        "value": "1663 (Dutch)"
+      },
+      {
+        "label": "Best Time",
+        "value": "Nov – Apr"
+      },
+      {
+        "label": "Region",
+        "value": "Southern Province"
+      },
+      {
+        "label": "Known For",
+        "value": "Galle Fort"
+      },
+      {
+        "label": "Coast",
+        "value": "Indian Ocean"
+      }
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1586713753899-3171306e00f5?auto=format&fit=crop&q=80&w=1920",
+    "heroVideo": "https://assets.mixkit.co/videos/preview/mixkit-sunlight-on-ocean-waves-and-sand-39295-large.mp4",
+    "color": "#E11D48",
+    "packageIds": [
+      "coastal-bliss"
+    ],
+    "nearbyPlaces": [
+      {
+        "slug": "mirissa",
+        "name": "Mirissa",
+        "subtitle": "Whale Watching Capital",
+        "summary": "A crescent of golden sand backed by palm trees, Mirissa is the launching point for whale watching excursions to see blue whales, sperm whales, and pods of spinner dolphins in the deep channels of the Indian Ocean.",
+        "longDescription": "Mirissa is a small town on the south coast of Sri Lanka, located in the Matara District of the Southern Province. Mirissa's beach and nightlife make it a popular tourist destination. It is also a fishing port and one of the island's main whale and dolphin watching locations. Blue whales are frequently seen from November to April, while pods of dolphins can be spotted throughout the year.",
+        "image": "https://images.unsplash.com/photo-1586713753899-3171306e00f5?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-sunlight-on-ocean-waves-and-sand-39295-large.mp4",
+        "side": "right",
+        "packageIds": [
+          "coastal-bliss"
+        ]
+      },
+      {
+        "slug": "unawatuna",
+        "name": "Unawatuna",
+        "subtitle": "The Sheltered Bay",
+        "summary": "A perfectly sheltered bay with calm waters and vibrant coral gardens. Unawatuna's horseshoe beach is lined with seafood restaurants, and the jungle behind it hides the Japanese Peace Pagoda on a forested hilltop.",
+        "longDescription": "Unawatuna is a coastal town in Galle district of Sri Lanka. Unawatuna is a major tourist attraction in Sri Lanka and known for its beautiful beach and corals. It is a suburb of Galle, about 5 kilometres southeast to the city center and approximately 108 kilometres south of Colombo. Unawatuna is situated at an elevation of 5 metres above the sea level.",
+        "image": "https://images.unsplash.com/photo-1440186347098-386b7459ad6b?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-beach-with-turquoise-water-21448-large.mp4",
+        "side": "left",
+        "packageIds": [
+          "coastal-bliss"
+        ]
+      },
+      {
+        "slug": "yala",
+        "name": "Yala",
+        "subtitle": "Leopard Country",
+        "summary": "The world's highest density of leopards is found here. Yala National Park combines coastal lagoons, dense jungle, and open grassland across 979 square kilometres — home to elephants, sloth bears, crocodiles, and the elusive Sri Lankan leopard.",
+        "longDescription": "Yala National Park is the most visited and second largest national park in Sri Lanka. The park consists of five blocks, two of which are now open to the public, and also adjoining parks. The blocks have individual names such as Ruhuna National Park, and Kumana National Park or 'Yala East' for the adjoining area. It is situated in the southeast region of the country, and lies in Southern Province and Uva Province.",
+        "image": "https://images.unsplash.com/photo-1503656142023-618e7d1f435a?auto=format&fit=crop&q=80&w=800",
+        "video": "https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-jungle-with-many-trees-31295-large.mp4",
+        "side": "right",
+        "packageIds": [
+          "coastal-bliss"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "test",
+    "name": "test",
+    "tagline": "test",
+    "region": "test",
+    "summary": "test",
+    "color": "#a80000",
+    "heroImage": "",
+    "heroVideo": "",
+    "heroGallery": [],
+    "preferredHeroType": "video",
+    "packageIds": [
+      "cultural-heartlands",
+      "coastal-bliss",
+      "hill-country-adventure",
+      "wellness-serenity"
+    ],
+    "nearbyPlaces": [
+      {
+        "slug": "test",
+        "name": "test",
+        "subtitle": "test",
+        "summary": "test",
+        "longDescription": "tese",
+        "image": "",
+        "video": "",
+        "side": "right",
+        "packageIds": [
+          "coastal-bliss",
+          "cultural-heartlands"
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "label": "test",
+        "value": "test"
+      }
+    ]
+  }
+]

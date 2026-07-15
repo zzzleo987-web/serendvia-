@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "slug": "secrets-of-sigiriya-skygardens",
+    "title": "Celestial Architecture: The Secrets of Sigiriya's Sky Gardens",
+    "excerpt": "Beyond the lion paw gates lies a marvel of hydraulic engineering and aesthetic perfection that defied its time, telling the story of a king who reached for the clouds.",
+    "content": "Rising abruptly from the central plains, the rock citadel of Sigiriya—also known as the Lion Rock—stands as a testament to the megalomania and genius of King Kashyapa. Built in the 5th century AD, it was designed not just as a fortress, but as a celestial palace that mirrored the legendary city of Alakamanda, the abode of gods.\n\n### The Hydraulic Mystery\nWhat truly baffles modern engineers is the hydraulic system of the Water Gardens. Even today, during the rainy season, the ancient fountains—fed by gravity and clever underground suction—continue to play. This was 1,500 years ago, a time when such feats were considered divine occurrences.\n\n### The Mirror Wall and Ancient Voices\nAscending the rock, one encounters the Mirror Wall. Originally polished so finely that the King could see his reflection while walking, it now serves as a rare archive of ancient graffiti. Visitors from as early as the 6th century left poems and observations carved into the plaster, giving us a direct window into the minds of those who made the pilgrimage over a millennium ago.\n\n### The Ethereal Frescoes\nHidden in a sheltered pocket of the rock are the Sigiriya Maidens—the only secular ancient paintings survived in Sri Lanka. These frescoes, painted with natural pigments that have remarkably retained their vibrancy, depict celestial nymphs or perhaps the King’s consorts, floating amidst clouds. They are the 'Mona Lisas' of Asia, capturing a moment of timeless beauty in a world of stone.",
+    "author": "Serendivia",
+    "date": "June 12, 2026",
+    "category": "Heritage",
+    "image": "https://images.unsplash.com/photo-1588107937407-7422b40344d5?auto=format&fit=crop&q=80&w=1200",
+    "destinationSlug": "sigiriya",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "2",
+    "slug": "kandyan-dance-the-fire-within",
+    "title": "The Fire Within: Deciphering the Rhythm of Kandyan Dance",
+    "excerpt": "A look at the sacred drumming and acrobatic fire-walks that have protected Lanka's royal valley for centuries.",
+    "content": "Full content would go here...",
+    "author": "Serendivia",
+    "date": "June 08, 2026",
+    "category": "Heritage",
+    "image": "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&q=80&w=1200",
+    "destinationSlug": "kandy",
+    "readTime": "6 min read"
+  },
+  {
+    "id": "3",
+    "slug": "ceylon-tea-ritual-noon-leaf",
+    "title": "The Noon Leaf: A Masterclass in the Ceylon Tea Ritual",
+    "excerpt": "In the mist-drenched peaks of Nuwara Eliya, tea isn't just a drink—it's a synchronized dance of nature and hand.",
+    "content": "Full content would go here...",
+    "author": "Serendivia",
+    "date": "May 28, 2026",
+    "category": "Culinary",
+    "image": "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=1200",
+    "destinationSlug": "ella",
+    "readTime": "10 min read"
+  },
+  {
+    "id": "4",
+    "slug": "galle-fort-cobblestone-whispers",
+    "title": "Cobblestone Whispers: An Evening in the Galle Bastion",
+    "excerpt": "When the sun dips below the Indian Ocean, the walls of the fort begin to speak of colonial echoes and coral stones.",
+    "content": "Full content would go here...",
+    "author": "Serendivia",
+    "date": "May 15, 2026",
+    "category": "Secrets",
+    "image": "https://images.unsplash.com/photo-1627443183570-5690b29c92f1?auto=format&fit=crop&q=80&w=1200",
+    "destinationSlug": "galle",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "5",
+    "slug": "yala-leopard-trackers-journal",
+    "title": "The Silent Watch: A Leopard Tracker's Solstice Journal",
+    "excerpt": "In the scrub jungles of the South, patience is the only currency. Tracking the most elusive cat in Asia.",
+    "content": "...",
+    "author": "Serendivia",
+    "date": "May 02, 2026",
+    "category": "Nature",
+    "image": "https://images.unsplash.com/photo-1549363071-70588669e25d?auto=format&fit=crop&q=80&w=1200",
+    "destinationSlug": "yala",
+    "readTime": "12 min read"
+  },
+  {
+    "id": "1781649707852",
+    "slug": "test",
+    "title": "test",
+    "excerpt": "test",
+    "content": "test",
+    "author": "Serendivia",
+    "date": "June 17, 2026",
+    "category": "Heritage",
+    "image": "",
+    "readTime": "5 min read",
+    "destinationSlug": "test"
+  }
+]
