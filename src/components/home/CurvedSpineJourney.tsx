@@ -193,22 +193,35 @@ export default function CurvedSpineJourney() {
       })
     });
 
-    // Optimized Video Management: Only play when visible
+    // Optimized Video Management: Only play when visible (threshold tuned to the middle focus)
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1
+      threshold: 0.55
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      const isMobile = window.innerWidth < 1024;
       entries.forEach(entry => {
         const video = entry.target as HTMLVideoElement;
         const isMobileVid = mobileVideoRefs.current.includes(video);
+        
         if (entry.isIntersecting) {
-          // Prevent autoplay on mobile screens to conserve device decoders
-          if (!isMobile && !isMobileVid) {
-            video.play().catch(() => { });
+          // Crucial Optimization: Pause ALL other videos globally to conserve hardware decoders
+          const allVids = [...videoRefs.current, ...mobileVideoRefs.current];
+          allVids.forEach(v => {
+            if (v && v !== video) {
+              v.pause();
+            }
+          });
+
+          video.play().catch(() => { });
+          
+          if (isMobileVid) {
+            const idx = mobileVideoRefs.current.indexOf(video);
+            if (idx !== -1) {
+              const destId = destinations[idx].id;
+              setPlayingMobileId(destId);
+            }
           }
         } else {
           video.pause();
