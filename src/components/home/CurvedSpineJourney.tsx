@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight, Play, Pause } from "lucide-react";
 
 const destinations = [
   {
@@ -80,6 +80,7 @@ export default function CurvedSpineJourney() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const mobileVideoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [activeLegend, setActiveLegend] = useState<number | null>(null);
+  const [playingMobileId, setPlayingMobileId] = useState<string | null>(null);
 
   useEffect(() => {
     let ctx: any;
@@ -200,12 +201,24 @@ export default function CurvedSpineJourney() {
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      const isMobile = window.innerWidth < 1024;
       entries.forEach(entry => {
         const video = entry.target as HTMLVideoElement;
+        const isMobileVid = mobileVideoRefs.current.includes(video);
         if (entry.isIntersecting) {
-          video.play().catch(() => { });
+          // Prevent autoplay on mobile screens to conserve device decoders
+          if (!isMobile && !isMobileVid) {
+            video.play().catch(() => { });
+          }
         } else {
           video.pause();
+          if (isMobileVid) {
+            const idx = mobileVideoRefs.current.indexOf(video);
+            if (idx !== -1) {
+              const destId = destinations[idx].id;
+              setPlayingMobileId(current => current === destId ? null : current);
+            }
+          }
         }
       });
     };
@@ -263,7 +276,26 @@ export default function CurvedSpineJourney() {
                 )`
               }}
             >
-              <div className="relative overflow-hidden bg-slate-950">
+              <div 
+                className="relative overflow-hidden bg-slate-950 cursor-pointer"
+                onClick={() => {
+                  const video = mobileVideoRefs.current[Number(dest.id) - 1];
+                  if (video) {
+                    if (video.paused) {
+                      mobileVideoRefs.current.forEach((v, idx) => {
+                        if (v && idx !== Number(dest.id) - 1) {
+                          v.pause();
+                        }
+                      });
+                      video.play().catch(() => {});
+                      setPlayingMobileId(dest.id);
+                    } else {
+                      video.pause();
+                      setPlayingMobileId(null);
+                    }
+                  }
+                }}
+              >
                 <video
                   ref={el => { mobileVideoRefs.current[Number(dest.id) - 1] = el }}
                   src={dest.video}
@@ -271,13 +303,26 @@ export default function CurvedSpineJourney() {
                   muted loop playsInline preload="none"
                   className="h-72 w-full object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-black/30 px-3 py-2 text-[10px] uppercase tracking-[0.35em] text-white shadow-lg">
-                  <Play size={12} />
-                  Preview
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-black/30 px-3 py-2 text-[10px] uppercase tracking-[0.35em] text-white shadow-lg pointer-events-none">
+                  {playingMobileId === dest.id ? (
+                    <>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ff52] animate-ping" />
+                      <span>Live</span>
+                    </>
+                  ) : (
+                    <>
+                      <Play size={12} />
+                      <span>Preview</span>
+                    </>
+                  )}
                 </div>
-                <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/25 p-3 text-white shadow-xl">
-                  <Play size={16} />
+                <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/25 p-3 text-white shadow-xl pointer-events-none transition-transform active:scale-95">
+                  {playingMobileId === dest.id ? (
+                    <Pause size={16} />
+                  ) : (
+                    <Play size={16} />
+                  )}
                 </div>
               </div>
 
