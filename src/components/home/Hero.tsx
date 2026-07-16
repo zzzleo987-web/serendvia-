@@ -47,11 +47,10 @@ export default function Hero() {
         ref={videoRef}
         src={HERO_VIDEO_URL}
         poster="/images/hero_poster.webp"
-        autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-0 hero-fade-in"
         style={{ animationDuration: "1.5s" }}
       />
