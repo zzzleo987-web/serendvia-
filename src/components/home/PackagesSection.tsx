@@ -30,7 +30,7 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, #A67C00 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, #02210a 1px, transparent 0)",
           backgroundSize: "40px 40px",
         }}
       />
@@ -45,8 +45,8 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
               viewport={{ once: true }}
               className="flex items-center gap-3 mb-4"
             >
-              <div className="h-[1px] w-8 bg-[#A67C00]" />
-              <span className="text-[10px] uppercase tracking-[0.5em] text-[#A67C00] font-bold">
+              <div className="h-[1px] w-8 bg-[#02210a]" />
+              <span className="text-[10px] uppercase tracking-[0.5em] text-[#02210a] font-bold">
                 Curated Journeys
               </span>
             </motion.div>
@@ -59,7 +59,7 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
             >
               Our Signature
               <br />
-              <span className="italic font-light text-[#A67C00]">Packages.</span>
+              <span className="italic font-light text-[#02210a]">Packages.</span>
             </motion.h2>
           </div>
           <motion.div
@@ -70,7 +70,7 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
           >
             <Link
               href="/packages"
-              className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 hover:text-[#A67C00] transition-colors duration-300 font-medium border border-[#1A1A1A]/15 px-6 py-3 rounded-full hover:border-[#A67C00]/40"
+              className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 hover:text-[#02210a] transition-colors duration-300 font-medium border border-[#1A1A1A]/15 px-6 py-3 rounded-full hover:border-[#02210a]/40"
             >
               View All Packages
               <span>→</span>
@@ -104,14 +104,15 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
                       alt={pkg.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw, 25vw"
+                      sizes="(max-width: 767px) 280px, 300px"
+                      quality={70}
                     />
                     {/* Subtle gradient at bottom of image for legibility */}
                     <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black/20 to-transparent" />
 
                     {/* Star Rating badge — top right */}
                     <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 shadow-sm">
-                      <Star size={11} className="text-[#A67C00] fill-[#A67C00]" />
+                      <Star size={11} className="text-[#02210a] fill-[#02210a]" />
                       <span className="text-[11px] font-bold text-[#1A1A1A]">
                         {(4.5 + (i % 5) * 0.1).toFixed(1)}
                       </span>
@@ -119,7 +120,7 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
 
                     {/* Badge — top left */}
                     {pkg.badge && (
-                      <div className="absolute top-3 left-3 bg-[#A67C00] text-white px-2.5 py-1 rounded-full text-[8px] font-bold uppercase tracking-widest shadow-md">
+                      <div className="absolute top-3 left-3 bg-[#02210a] text-white px-2.5 py-1 rounded-full text-[8px] font-bold uppercase tracking-widest shadow-md">
                         {pkg.badge}
                       </div>
                     )}
@@ -133,7 +134,7 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
                       <h3 className="text-base font-bold text-[#1A1A1A] leading-tight">
                         {pkg.title}
                       </h3>
-                      <span className="text-base font-black text-[#A67C00] shrink-0">
+                      <span className="text-base font-black text-[#02210a] shrink-0">
                         ${pkg.price.toLocaleString()}
                       </span>
                     </div>
@@ -156,7 +157,7 @@ export default function PackagesSection({ packages }: { packages: TourPackage[] 
                         <CalendarDays size={13} />
                         <span className="text-xs font-medium">{pkg.durationDays} days</span>
                       </div>
-                      <div className="w-9 h-9 rounded-full border border-[#1A1A1A]/10 flex items-center justify-center text-[#1A1A1A]/60 group-hover:border-[#A67C00] group-hover:text-[#A67C00] group-hover:bg-[#A67C00]/5 transition-all">
+                      <div className="w-9 h-9 rounded-full border border-[#1A1A1A]/10 flex items-center justify-center text-[#1A1A1A]/60 group-hover:border-[#02210a] group-hover:text-[#02210a] group-hover:bg-[#02210a]/5 transition-all">
                         <ArrowUpRight size={17} strokeWidth={2} />
                       </div>
                     </div>

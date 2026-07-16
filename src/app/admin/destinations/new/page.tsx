@@ -16,7 +16,7 @@ export default async function AdminNewDestinationPage() {
     summary: "",
     heroImage: "",
     heroVideo: "",
-    color: "#A67C00",
+    color: "#02210a",
     facts: [
       { label: "Founded", value: "" },
       { label: "Elevation", value: "" },

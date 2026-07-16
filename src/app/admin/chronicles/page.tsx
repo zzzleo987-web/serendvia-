@@ -12,7 +12,7 @@ export default function AdminChroniclesPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-10">
         <div>
-          <p className="text-[10px] uppercase tracking-[0.4em] text-[#A67C00] mb-2">Management</p>
+          <p className="text-[10px] uppercase tracking-[0.4em] text-[#02210a] mb-2">Management</p>
           <h1 className="text-3xl font-serif font-black text-white">Chronicles</h1>
           <p className="text-sm text-white/30 mt-1">
             {chronicles.length} stories published
@@ -20,7 +20,7 @@ export default function AdminChroniclesPage() {
         </div>
         <Link 
           href="/admin/chronicles/new"
-          className="px-6 py-3 bg-[#A67C00] hover:bg-[#C9960C] text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-full transition-all duration-300 shadow-xl shadow-[#A67C00]/10 flex items-center gap-3"
+          className="px-6 py-3 bg-[#02210a] hover:bg-[#C9960C] text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-full transition-all duration-300 shadow-xl shadow-[#02210a]/10 flex items-center gap-3"
         >
           <span className="text-lg leading-none">+</span>
           Write Story
@@ -45,7 +45,7 @@ export default function AdminChroniclesPage() {
             {/* Info */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-2">
-                <span className="px-2.5 py-0.5 rounded-full bg-[#A67C00]/10 border border-[#A67C00]/20 text-[#A67C00] text-[9px] font-black uppercase tracking-widest">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#02210a]/10 border border-[#02210a]/20 text-[#02210a] text-[9px] font-black uppercase tracking-widest">
                   {story.category}
                 </span>
                 {story.destinationSlug && (
@@ -54,26 +54,26 @@ export default function AdminChroniclesPage() {
                   </span>
                 )}
               </div>
-              <h2 className="text-xl font-serif font-bold text-white group-hover:text-[#A67C00] transition-colors mb-2">
+              <h2 className="text-xl font-serif font-bold text-white group-hover:text-[#02210a] transition-colors mb-2">
                 {story.title}
               </h2>
               <div className="flex flex-wrap items-center gap-4 text-[10px] text-white/30 uppercase tracking-widest">
                 <div className="flex items-center gap-1.5">
-                  <User size={12} className="text-[#A67C00]" />
+                  <User size={12} className="text-[#02210a]" />
                   {story.author}
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Calendar size={12} className="text-[#A67C00]" />
+                  <Calendar size={12} className="text-[#02210a]" />
                   {story.date}
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <BookOpen size={12} className="text-[#A67C00]" />
+                  <BookOpen size={12} className="text-[#02210a]" />
                   {story.readTime}
                 </div>
               </div>
             </div>
 
-            <div className="shrink-0 text-white/10 group-hover:text-[#A67C00] transition-all group-hover:translate-x-1">
+            <div className="shrink-0 text-white/10 group-hover:text-[#02210a] transition-all group-hover:translate-x-1">
               <ArrowRight size={24} />
             </div>
           </Link>

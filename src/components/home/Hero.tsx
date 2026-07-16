@@ -55,9 +55,9 @@ export default function Hero() {
         style={{ animationDuration: "1.5s" }}
       />
 
-      {/* Editorial Gradient Overlays */}
-      <div className="absolute inset-0 z-[5] bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 z-[5] bg-gradient-to-r from-[#050505]/70 via-[#050505]/20 to-transparent pointer-events-none" />
+      {/* Editorial Gradient Overlays - Made extremely subtle so the video stays bright */}
+      <div className="absolute inset-0 z-[5] bg-gradient-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 z-[5] bg-gradient-to-r from-black/30 via-transparent to-transparent pointer-events-none" />
 
       {/* Invisible Overlay to close dropdowns */}
       {activeMenu && (
@@ -77,20 +77,20 @@ export default function Hero() {
         >
           <div className="px-5 py-2.5 rounded-full border border-white/10 flex items-center gap-3 bg-white/5 backdrop-blur-md pointer-events-auto">
             <span className="text-[9px] uppercase tracking-[0.4em] text-white/50">Curated Season</span>
-            <span className="text-xs font-semibold text-[#A67C00] tracking-widest">Dec – Apr</span>
+            <span className="text-xs font-semibold text-[#00ff52] tracking-widest">Dec – Apr</span>
           </div>
         </div>
 
         {/* Hero Typography */}
         <div className="max-w-[800px] pointer-events-auto">
           <div className="flex items-center gap-4 mb-8">
-            <div className="h-[1px] w-12 bg-[#A67C00]" />
-            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-[#A67C00] font-bold">
+            <div className="h-[1px] w-12 bg-[#00ff52]" />
+            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-[#00ff52] font-bold">
               Pearl of the Indian Ocean
             </span>
           </div>
 
-          <h1 className="font-serif leading-[0.9] tracking-tight mb-10 overflow-hidden">
+          <h1 className="font-serif font-bold leading-[0.9] tracking-tight mb-10 overflow-hidden drop-shadow-2xl">
             <span 
               className="block text-white"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
@@ -98,17 +98,13 @@ export default function Hero() {
               DISCOVER
             </span>
             <span 
-              className="block"
-              style={{
-                fontSize: "clamp(2.5rem, 6vw, 5.5rem)",
-                WebkitTextStroke: "1px rgba(255,255,255,0.3)",
-                color: "transparent"
-              }}
+              className="block text-white"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
             >
               SRI LANKA
             </span>
             <span 
-              className="block italic font-light text-[#A67C00]"
+              className="block italic text-[#00ff52] drop-shadow-md"
               style={{ fontSize: "clamp(1.8rem, 4vw, 3.5rem)" }}
             >
               Differently.
@@ -135,7 +131,7 @@ export default function Hero() {
                   <span className="text-3xl lg:text-5xl font-serif font-black text-white leading-none">
                     {stat.value}
                   </span>
-                  <span className="text-sm font-bold text-[#A67C00]">{stat.unit}</span>
+                  <span className="text-sm font-bold text-[#00ff52]">{stat.unit}</span>
                 </div>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-white/50 mt-2 max-w-[120px] leading-relaxed">
                   {stat.label}
@@ -158,10 +154,10 @@ export default function Hero() {
                   onClick={(e) => { e.stopPropagation(); setActiveMenu(activeMenu === 'where' ? null : 'where'); }}
                 >
                   <div className="flex items-center gap-2.5">
-                    <MapPin size={15} strokeWidth={1.5} className="text-[#D4AF37]" />
+                    <MapPin size={15} strokeWidth={1.5} className="text-[#00ff52]" />
                     <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-white">Where</span>
                   </div>
-                  {where !== "Anywhere" && <span className="text-[11px] text-[#D4AF37] mt-0.5 ml-6 whitespace-nowrap">{where}</span>}
+                  {where !== "Anywhere" && <span className="text-[11px] text-[#00ff52] mt-0.5 ml-6 whitespace-nowrap">{where}</span>}
                 </div>
 
                 {/* When Action */}
@@ -170,10 +166,10 @@ export default function Hero() {
                   onClick={(e) => { e.stopPropagation(); setActiveMenu(activeMenu === 'when' ? null : 'when'); }}
                 >
                   <div className="flex items-center gap-2.5">
-                    <Calendar size={15} strokeWidth={1.5} className="text-[#D4AF37]" />
+                    <Calendar size={15} strokeWidth={1.5} className="text-[#00ff52]" />
                     <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-white">When</span>
                   </div>
-                  {when !== "Anytime" && <span className="text-[11px] text-[#D4AF37] mt-0.5 ml-6 whitespace-nowrap">{when}</span>}
+                  {when !== "Anytime" && <span className="text-[11px] text-[#00ff52] mt-0.5 ml-6 whitespace-nowrap">{when}</span>}
                 </div>
 
                 {/* Guests Action */}
@@ -182,10 +178,10 @@ export default function Hero() {
                   onClick={(e) => { e.stopPropagation(); setActiveMenu(activeMenu === 'guests' ? null : 'guests'); }}
                 >
                   <div className="flex items-center gap-2.5">
-                    <Users size={15} strokeWidth={1.5} className="text-[#D4AF37]" />
+                    <Users size={15} strokeWidth={1.5} className="text-[#00ff52]" />
                     <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-white">Guests</span>
                   </div>
-                  {guests > 0 && <span className="text-[11px] text-[#D4AF37] mt-0.5 ml-6 whitespace-nowrap">{guests} People</span>}
+                  {guests > 0 && <span className="text-[11px] text-[#00ff52] mt-0.5 ml-6 whitespace-nowrap">{guests} People</span>}
                 </div>
 
               </div>
@@ -193,14 +189,14 @@ export default function Hero() {
               {/* Submit Button */}
               <button 
                 onClick={handleSearch}
-                className="flex h-[46px] items-center justify-center rounded-full bg-gradient-to-r from-[#A47F35] to-[#D4AF37] hover:from-white hover:to-white shadow-[0_4px_20px_rgba(164,127,53,0.4)] px-8 text-[10px] font-black uppercase tracking-[0.3em] text-black transition-all duration-300 hover:shadow-[0_4px_25px_rgba(255,255,255,0.6)] ml-2"
+                className="flex h-[46px] items-center justify-center rounded-full bg-gradient-to-r from-[#00ff52] to-[#007a27] hover:from-white hover:to-white shadow-[0_4px_20px_rgba(0,255,82,0.4)] px-8 text-[10px] font-black uppercase tracking-[0.3em] text-black transition-all duration-300 hover:shadow-[0_4px_25px_rgba(255,255,255,0.6)] ml-2"
               >
                 Design Your Escape
               </button>
             </div>
 
             {/* Custom Popovers */}
-            <div className="absolute top-[calc(100%+16px)] left-0 w-full md:min-w-[400px]">
+            <div className="absolute bottom-[calc(100%+16px)] left-0 w-full md:min-w-[400px]">
               
               {/* Where Popover */}
               {activeMenu === 'where' && (
@@ -213,7 +209,7 @@ export default function Hero() {
                         className="px-4 py-3 rounded-xl cursor-pointer transition-colors hover:bg-white/10 text-white flex items-center justify-between group"
                       >
                         <span className="text-sm font-medium">{dest}</span>
-                        {where === dest && <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />}
+                        {where === dest && <div className="w-2 h-2 rounded-full bg-[#00ff52]" />}
                       </div>
                     ))}
                   </div>
@@ -231,7 +227,7 @@ export default function Hero() {
                         className="px-4 py-3 rounded-xl cursor-pointer transition-colors hover:bg-white/10 text-white flex items-center justify-between"
                       >
                         <span className="text-sm font-medium">{season}</span>
-                        {when === season && <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />}
+                        {when === season && <div className="w-2 h-2 rounded-full bg-[#00ff52]" />}
                       </div>
                     ))}
                   </div>
@@ -249,14 +245,14 @@ export default function Hero() {
                     <div className="flex items-center gap-4">
                       <button 
                         onClick={() => setGuests(prev => Math.max(1, prev - 1))}
-                        className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                        className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#00ff52] hover:text-[#00ff52] transition-colors"
                       >
                         <Minus size={14} />
                       </button>
                       <span className="text-white text-lg font-medium w-4 text-center">{guests}</span>
                       <button 
                         onClick={() => setGuests(prev => prev + 1)}
-                        className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                        className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#00ff52] hover:text-[#00ff52] transition-colors"
                       >
                         <Plus size={14} />
                       </button>
@@ -278,7 +274,7 @@ export default function Hero() {
           onClick={handleSearch}
           className="w-full flex items-center justify-center gap-3 h-[56px] rounded-full bg-black/60 backdrop-blur-xl border border-white/20 text-[11px] font-black uppercase tracking-[0.25em] text-white shadow-[0_8px_32px_rgba(0,0,0,0.5)] active:scale-[0.98] transition-transform"
         >
-          <Search size={16} className="text-[#A67C00]" />
+          <Search size={16} className="text-[#00ff52]" />
           Design Your Escape
         </button>
       </div>
@@ -289,8 +285,8 @@ export default function Hero() {
         style={{ animationDelay: "1.5s", animationDuration: "2s" }}
       >
         <div className="relative w-[1px] h-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[#A67C00]/30" />
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-[#A67C00] animate-[shimmer_2s_infinite]" />
+          <div className="absolute inset-0 bg-[#00ff52]/30" />
+          <div className="absolute top-0 left-0 w-full h-1/2 bg-[#00ff52] animate-[shimmer_2s_infinite]" />
         </div>
         <span className="text-[9px] uppercase tracking-[0.5em] text-white/40" style={{ writingMode: "vertical-rl" }}>
           Unwind

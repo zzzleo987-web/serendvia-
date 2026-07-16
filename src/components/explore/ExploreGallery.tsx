@@ -21,7 +21,7 @@ export default function ExploreGallery({ destinations }: Props) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-[10px] font-black tracking-[0.6em] text-[#A67C00] uppercase mb-6"
+          className="text-[10px] font-black tracking-[0.6em] text-[#02210a] uppercase mb-6"
         >
           Serendivia · Destinations
         </motion.p>
@@ -46,7 +46,7 @@ export default function ExploreGallery({ destinations }: Props) {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="w-24 h-px bg-[#A67C00] mx-auto mt-10 origin-left"
+          className="w-24 h-px bg-[#02210a] mx-auto mt-10 origin-left"
         />
       </div>
 
@@ -90,7 +90,7 @@ export default function ExploreGallery({ destinations }: Props) {
                 {/* Top Badges */}
                 <div className="absolute top-6 left-6 flex items-center gap-3 z-10">
                   <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] font-black tracking-widest uppercase">
-                    <MapPin size={9} className="text-[#A67C00]" />
+                    <MapPin size={9} className="text-[#02210a]" />
                     {dest.region}
                   </span>
                 </div>
@@ -162,7 +162,7 @@ export default function ExploreGallery({ destinations }: Props) {
           </p>
           <Link
             href="/packages"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-[#1A1A1A] text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-[#A67C00] transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-[#1A1A1A] text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-[#02210a] transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl"
           >
             View All Packages <ArrowUpRight size={14} />
           </Link>

@@ -29,7 +29,7 @@ export const chronicles: Chronicle[] = [
     readTime: "8 min read",
     heroImage: "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&q=80&w=1920",
     heroVideo: "https://assets.mixkit.co/videos/preview/mixkit-ancient-stone-statues-in-a-temple-41443-large.mp4",
-    accentColor: "#D4AF37",
+    accentColor: "#007a27",
     summary: "Rising 200 metres above the emerald jungles of central Sri Lanka, Sigiriya is not just a rock; it is a testament to the heights of human ambition, obsession, and artistic genius.",
     chapters: [
       {

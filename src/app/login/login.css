@@ -199,7 +199,7 @@
 }
 
 .login-check.on {
-  background: linear-gradient(135deg, #A67C00, #C9960C);
+  background: linear-gradient(135deg, #02210a, #C9960C);
   border-color: #C9960C;
 }
 
@@ -233,7 +233,7 @@
 }
 
 .login-forgot:hover {
-  color: #D4AF37;
+  color: #007a27;
 }
 
 /* ── Submit ── */
@@ -252,7 +252,7 @@
   cursor: pointer;
   overflow: hidden;
   margin-top: 0.5rem;
-  background: linear-gradient(135deg, #8B6914, #A67C00, #B8860B);
+  background: linear-gradient(135deg, #8B6914, #02210a, #B8860B);
   box-shadow: 0 6px 24px rgba(166, 124, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -261,7 +261,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #B8860B, #D4AF37);
+  background: linear-gradient(135deg, #B8860B, #007a27);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -349,7 +349,7 @@
 }
 
 .login-footer a:hover {
-  color: #D4AF37;
+  color: #007a27;
 }
 
 /* ── Error ── */

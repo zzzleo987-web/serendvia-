@@ -27,7 +27,7 @@ export default function SoundscapeControl() {
     >
       <motion.button
         onClick={toggleSound}
-        className="w-12 h-12 glass-card-gold rounded-full flex items-center justify-center text-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] group"
+        className="w-12 h-12 glass-card rounded-full flex items-center justify-center text-[#007a27] shadow-[0_0_20px_rgba(0,122,39,0.2)] group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
@@ -43,7 +43,7 @@ export default function SoundscapeControl() {
              {[1,2,3].map(i => (
                <motion.div 
                  key={i}
-                 className="w-0.5 h-2 bg-[#D4AF37]"
+                 className="w-0.5 h-2 bg-[#007a27]"
                  animate={{ height: [4, 10, 4] }}
                  transition={{ duration: 0.5 + i*0.1, repeat: Infinity }}
                />
@@ -58,11 +58,11 @@ export default function SoundscapeControl() {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -10 }}
-            className="px-4 py-2 glass-card rounded-xl border-[#D4AF37]/20"
+            className="px-4 py-2 glass-card rounded-xl border-[#007a27]/20"
           >
             <div className="flex items-center gap-2">
-               <Music size={12} className="text-[#D4AF37]" />
-               <span className="text-[9px] font-black tracking-widest text-[#D4AF37] uppercase">
+               <Music size={12} className="text-[#007a27]" />
+               <span className="text-[9px] font-black tracking-widest text-[#007a27] uppercase">
                  Living Heritage Soundscape
                </span>
             </div>

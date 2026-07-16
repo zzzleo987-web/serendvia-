@@ -34,7 +34,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               href={item.href}
               className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm text-white/40 hover:text-white hover:bg-white/[0.04] transition-all duration-200 group"
             >
-              <span className="text-base group-hover:text-[#A67C00] transition-colors">{item.icon}</span>
+              <span className="text-base group-hover:text-[#02210a] transition-colors">{item.icon}</span>
               <span className="font-medium tracking-wide">{item.label}</span>
             </Link>
           ))}

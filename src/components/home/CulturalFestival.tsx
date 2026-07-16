@@ -92,14 +92,14 @@ export default function CulturalFestival() {
   const titleWords = ["The", "Rhythm", "of", "Lanka"];
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-[100vh] bg-[#050505] text-[#F8FAFC] flex flex-col items-center justify-center overflow-hidden pt-32 pb-48 z-20">
+    <section ref={sectionRef} className="relative w-full min-h-[100vh] bg-[#85ca2c] text-[#02210a] flex flex-col items-center justify-center overflow-hidden pt-32 pb-48 z-20">
       
       {/* Background Particles Motif */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
          {particles.map((p) => (
             <div 
                key={p.id}
-               className="gold-particle absolute rounded-full bg-[#D4AF37] blur-[1px] will-change-transform"
+               className="gold-particle absolute rounded-full bg-white blur-[1px] will-change-transform"
                style={{
                   left: p.left,
                   top: p.top,
@@ -115,16 +115,17 @@ export default function CulturalFestival() {
          
          {/* Left: The Performance Imagery */}
          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative aspect-[3/4] w-full max-w-sm lg:max-w-md overflow-hidden rounded-[2rem] shadow-[0_0_60px_rgba(212,175,55,0.1)] ring-1 ring-[#D4AF37]/10 will-change-transform">
+            <div className="relative aspect-[3/4] w-full max-w-sm lg:max-w-md overflow-hidden rounded-[2rem] shadow-[0_0_60px_rgba(212,175,55,0.1)] ring-1 ring-[#02210a]/10 will-change-transform">
                <Image 
-                 src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&q=80&w=600" 
-                 alt="Kandyan Dancer" 
-                 fill 
-                 className="festival-image object-cover will-change-transform" 
-                 sizes="(max-width: 768px) 100vw, 50vw"
-                 priority
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
+                  src="https://cdn.discordapp.com/attachments/793933824308019210/1527007761093628089/images_5.jpeg?ex=6a59184c&is=6a57c6cc&hm=d4decca4acc690853bd63656600d38f9277b771484f5a84fa717504b60046999&" 
+                  alt="Kandyan Dancer" 
+                  fill 
+                  className="festival-image object-cover will-change-transform" 
+                  sizes="(max-width: 767px) 384px, 448px"
+                  quality={70}
+                  priority
+                />
+               <div className="absolute inset-0 bg-gradient-to-t from-[#85ca2c] via-transparent to-transparent opacity-80" />
             </div>
          </div>
 
@@ -134,7 +135,7 @@ export default function CulturalFestival() {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="text-sm font-black tracking-[0.5em] text-[#D4AF37] uppercase"
+               className="text-sm font-black tracking-[0.5em] text-white uppercase"
             >
                Live Heritage
             </motion.h4>
@@ -145,13 +146,13 @@ export default function CulturalFestival() {
                ))}
             </h2>
 
-            <p className="text-xl md:text-2xl font-serif italic text-gray-400 font-light max-w-lg leading-relaxed">
+            <p className="text-xl md:text-2xl font-serif italic text-[#02210a]/80 font-light max-w-lg leading-relaxed">
                Feel the heartbeat of an island through the centuries-old art of Kandyan dance, where fire, gold, and rhythm intertwine.
             </p>
 
-            <button className="group mt-12 relative px-10 py-5 overflow-hidden rounded-full border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-colors duration-500">
-               <div className="absolute inset-0 bg-[#D4AF37]/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
-               <span className="relative z-10 text-xs font-black tracking-widest text-[#D4AF37] uppercase">Witness The Performance</span>
+            <button className="group mt-12 relative px-10 py-5 overflow-hidden rounded-full border border-[#02210a]/30 hover:border-white hover:shadow-xl transition-all duration-500">
+               <div className="absolute inset-0 bg-white translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+               <span className="relative z-10 text-xs font-black tracking-widest text-[#02210a] uppercase">Witness The Performance</span>
             </button>
          </div>
 

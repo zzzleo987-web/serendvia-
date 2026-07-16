@@ -10,7 +10,7 @@ const destinations = [
     name: "Sigiriya",
     sub: "The Lion Rock Citadel",
     desc: "A sky palace of ancient kings, rising from the emerald canopy of the central plains. Here, art and engineering meet the clouds.",
-    color: "#D4AF37", // Gold
+    color: "#007a27", // Gold
     image: "/images/hero.png",
     side: "right"
   },

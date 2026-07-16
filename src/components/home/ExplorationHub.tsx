@@ -116,16 +116,16 @@ export default function ExplorationHub() {
             style={{ x: springX, y: springY, translateX: "-50%", translateY: "-50%" }}
             className="absolute inset-0 z-30 pointer-events-none"
           >
-            <div className="w-64 h-64 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 shadow-[0_0_50px_rgba(212,175,55,0.05)] flex items-center justify-center">
-               <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
-               <div className="absolute inset-0 border-t border-[#D4AF37]/30 rounded-full" />
+            <div className="w-64 h-64 rounded-full border border-[#007a27]/30 bg-[#007a27]/10 shadow-[0_0_50px_rgba(212,175,55,0.05)] flex items-center justify-center">
+               <div className="w-2 h-2 rounded-full bg-[#007a27]" />
+               <div className="absolute inset-0 border-t border-[#007a27]/30 rounded-full" />
             </div>
           </motion.div>
 
           {/* The Artistic Map SVG */}
           <div className="relative w-full max-w-lg aspect-[3/4]">
              {/* Base Map Outline */}
-             <svg viewBox="0 0 400 600" className="w-full h-full opacity-10 fill-none stroke-[#D4AF37] stroke-[0.5px]">
+             <svg viewBox="0 0 400 600" className="w-full h-full opacity-10 fill-none stroke-[#007a27] stroke-[0.5px]">
                 <path d="M190,40 C210,50 230,80 240,110 C250,140 280,180 290,220 C300,260 330,300 320,380 C310,460 280,520 220,570 C160,550 120,530 100,480 C80,430 70,350 80,270 C90,190 120,130 140,80 C160,30 190,40 190,40 Z" />
                 {/* Simplified topological lines */}
                 <path d="M150,150 Q200,180 250,150" opacity="0.3" />
@@ -142,8 +142,8 @@ export default function ExplorationHub() {
                   style={{ top: `${region.coordinates.y}%`, left: `${region.coordinates.x}%` }}
                 >
                   <div className="relative flex items-center justify-center">
-                    <div className={`w-4 h-4 rounded-full border-2 transition-all duration-500 ${activeRegion.id === region.id ? 'bg-[#D4AF37] border-white scale-125' : 'bg-white/10 border-white/20 group-hover:border-[#D4AF37]/50'}`} />
-                    <div className={`absolute -inset-4 rounded-full border border-[#D4AF37]/20 ${activeRegion.id === region.id ? 'animate-ping' : 'opacity-0'}`} />
+                    <div className={`w-4 h-4 rounded-full border-2 transition-all duration-500 ${activeRegion.id === region.id ? 'bg-[#007a27] border-white scale-125' : 'bg-white/10 border-white/20 group-hover:border-[#007a27]/50'}`} />
+                    <div className={`absolute -inset-4 rounded-full border border-[#007a27]/20 ${activeRegion.id === region.id ? 'animate-ping' : 'opacity-0'}`} />
                     
                     {/* Hover Tooltip */}
                     <AnimatePresence>
@@ -152,9 +152,9 @@ export default function ExplorationHub() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0 }}
-                          className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-[#D4AF37]/30"
+                          className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-[#007a27]/30"
                         >
-                          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#D4AF37]">{region.name}</span>
+                          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#007a27]">{region.name}</span>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -182,8 +182,8 @@ export default function ExplorationHub() {
              >
                <div className="space-y-4">
                  <div className="flex items-center gap-3">
-                    <div className="h-px w-8 bg-[#D4AF37]" />
-                    <span className="text-[10px] uppercase tracking-[0.5em] text-[#D4AF37] font-bold">Region Discovery</span>
+                    <div className="h-px w-8 bg-[#007a27]" />
+                    <span className="text-[10px] uppercase tracking-[0.5em] text-[#007a27] font-bold">Region Discovery</span>
                  </div>
                  <h2 className="text-5xl md:text-7xl font-serif font-black text-white leading-none">
                    {activeRegion.name.split(' ')[0]}<br />
@@ -199,7 +199,7 @@ export default function ExplorationHub() {
                <div className="flex items-center gap-12 pt-8">
                   <div>
                      <p className="text-[9px] uppercase tracking-[0.4em] text-white/20 mb-1">Starting from</p>
-                     <p className="text-4xl font-serif font-black text-[#D4AF37]">${activeRegion.price}</p>
+                     <p className="text-4xl font-serif font-black text-[#007a27]">${activeRegion.price}</p>
                   </div>
                   <div className="flex -space-x-3">
                      {[...Array(3)].map((_, i) => (
@@ -216,12 +216,12 @@ export default function ExplorationHub() {
                <div className="flex flex-col sm:flex-row gap-6 pt-12">
                   <Link 
                     href={`/packages/${activeRegion.packageId}`}
-                    className="group relative px-10 py-5 bg-[#D4AF37] hover:bg-white text-black text-[10px] font-black uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-4 overflow-hidden"
+                    className="group relative px-10 py-5 bg-[#007a27] hover:bg-white text-black text-[10px] font-black uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-4 overflow-hidden"
                   >
                     <span className="relative z-10">Select Journey</span>
                     <ArrowRight size={16} className="relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
                   </Link>
-                  <button className="px-10 py-5 border border-white/10 hover:border-[#D4AF37]/50 text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full transition-all backdrop-blur-sm">
+                  <button className="px-10 py-5 border border-white/10 hover:border-[#007a27]/50 text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full transition-all backdrop-blur-sm">
                     View Dossier
                   </button>
                </div>
@@ -231,7 +231,7 @@ export default function ExplorationHub() {
            {/* Quick Stats Overlay */}
            <div className="mt-24 grid grid-cols-2 gap-12 border-t border-white/5 pt-12 w-full">
               <div className="flex flex-col gap-2">
-                 <div className="flex items-center gap-2 text-[#D4AF37]">
+                 <div className="flex items-center gap-2 text-[#007a27]">
                     <ShieldCheck size={14} />
                     <span className="text-[8px] font-bold uppercase tracking-widest">Vault Security</span>
                  </div>

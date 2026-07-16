@@ -84,7 +84,7 @@ export default function AdminProfilePage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10"
       >
-        <p className="text-[10px] uppercase tracking-[0.4em] text-[#A67C00] mb-2 font-bold">Secure Access</p>
+        <p className="text-[10px] uppercase tracking-[0.4em] text-[#02210a] mb-2 font-bold">Secure Access</p>
         <h1 className="text-3xl font-serif font-black text-white">Profile & Account</h1>
         <p className="text-sm text-white/30 mt-1">Manage your administrative credentials and session.</p>
       </motion.div>
@@ -97,8 +97,8 @@ export default function AdminProfilePage() {
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
             
             <div className="relative">
-              <div className="w-24 h-24 rounded-full bg-[#A67C00]/10 border border-[#A67C00]/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-500">
-                <span className="text-4xl font-serif font-black text-[#A67C00]">
+              <div className="w-24 h-24 rounded-full bg-[#02210a]/10 border border-[#02210a]/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-500">
+                <span className="text-4xl font-serif font-black text-[#02210a]">
                   {formData.name?.charAt(0) || "A"}
                 </span>
               </div>
@@ -147,7 +147,7 @@ export default function AdminProfilePage() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#A67C00]/40 outline-none transition-all"
+                    className="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#02210a]/40 outline-none transition-all"
                     placeholder="Enter full name"
                   />
                 </div>
@@ -159,7 +159,7 @@ export default function AdminProfilePage() {
                     type="text"
                     value={formData.username}
                     onChange={(e) => setFormData({ ...formData, username: e.target.value })}
-                    className="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#A67C00]/40 outline-none transition-all"
+                    className="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#02210a]/40 outline-none transition-all"
                     placeholder="admin"
                   />
                 </div>
@@ -171,7 +171,7 @@ export default function AdminProfilePage() {
                     type="password"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#A67C00]/40 outline-none transition-all"
+                    className="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#02210a]/40 outline-none transition-all"
                     placeholder="Leave blank to keep current"
                   />
                   <p className="text-[10px] text-white/20 mt-2 ml-1 italic">Security Note: Use a strong, unique password.</p>
@@ -203,7 +203,7 @@ export default function AdminProfilePage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 bg-[#A67C00] hover:bg-[#C9960C] disabled:bg-white/5 disabled:text-white/20 text-white text-[11px] font-black uppercase tracking-[0.5em] rounded-full transition-all duration-500 shadow-xl shadow-[#A67C00]/10"
+                className="w-full py-4 bg-[#02210a] hover:bg-[#C9960C] disabled:bg-white/5 disabled:text-white/20 text-white text-[11px] font-black uppercase tracking-[0.5em] rounded-full transition-all duration-500 shadow-xl shadow-[#02210a]/10"
               >
                 {loading ? "Processing..." : "Commit Changes"}
               </button>

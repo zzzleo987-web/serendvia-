@@ -46,7 +46,7 @@ const regions: Region[] = [
     id: "east",
     title: "Oceanic East",
     subtitle: "Sapphire bays & marine life",
-    image: "https://images.unsplash.com/photo-1586713753899-3171306e00f5?auto=format&fit=crop&q=80&w=500",
+    image: "/images/hero_poster.webp",
     video: "https://assets.mixkit.co/videos/preview/mixkit-sunlight-on-ocean-waves-and-sand-39295-large.mp4",
     quote: "The sunrise starts here.",
     stats: { temp: "31°C", humidity: "70%", biodiversity: "Marine" }
@@ -116,7 +116,7 @@ export default function RegionalShowcase() {
         {/* Compact Information Rail */}
         <div className="lg:col-span-5 space-y-10 z-20">
           <div className="space-y-3">
-             <span className="text-[#A67C00] text-[9px] font-black tracking-[0.5em] uppercase">Wayfinder Journey</span>
+             <span className="text-[#02210a] text-[9px] font-black tracking-[0.5em] uppercase">Wayfinder Journey</span>
              <h2 className="text-4xl lg:text-5xl font-serif font-black text-black leading-none tracking-tighter">Regional Index</h2>
           </div>
 
@@ -128,7 +128,7 @@ export default function RegionalShowcase() {
                    className="flex items-center gap-4 group/item w-fit text-left"
                 >
                    <div className={`w-1 transition-all duration-700 rounded-full ${
-                      activeIndex === i ? "h-8 bg-[#A67C00]" : "h-2 bg-black/5 group-hover/item:bg-black/20"
+                      activeIndex === i ? "h-8 bg-[#02210a]" : "h-2 bg-black/5 group-hover/item:bg-black/20"
                    }`} />
                    <span className={`text-base lg:text-lg font-serif italic transition-all duration-700 ${
                       activeIndex === i ? "text-black translate-x-2" : "text-black/20 group-hover/item:text-black/40"
@@ -151,15 +151,15 @@ export default function RegionalShowcase() {
                <p className="text-black/50 font-serif italic text-base leading-relaxed max-w-[320px]">{activeRegion.subtitle}</p>
                <div className="flex gap-8">
                   <div className="space-y-0.5">
-                     <p className="text-[7px] font-black uppercase tracking-widest text-[#A67C00]">Climate</p>
+                     <p className="text-[7px] font-black uppercase tracking-widest text-[#02210a]">Climate</p>
                      <p className="text-black font-serif italic text-lg">{activeRegion.stats.temp}</p>
                   </div>
                   <div className="space-y-0.5">
-                     <p className="text-[7px] font-black uppercase tracking-widest text-[#A67C00]">Ecology</p>
+                     <p className="text-[7px] font-black uppercase tracking-widest text-[#02210a]">Ecology</p>
                      <p className="text-black font-serif italic text-lg">{activeRegion.stats.biodiversity}</p>
                   </div>
                </div>
-               <button className="flex items-center gap-4 px-6 py-3 bg-black text-[#A67C00] text-[9px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-[#A67C00] hover:text-white transition-all shadow-xl">
+               <button className="flex items-center gap-4 px-6 py-3 bg-black text-[#02210a] text-[9px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-[#02210a] hover:text-white transition-all shadow-xl">
                   Expedition Protocol <ArrowUpRight size={10} />
                </button>
             </motion.div>
@@ -176,7 +176,7 @@ export default function RegionalShowcase() {
           {/* Internal Instruction Overlay */}
           <div className="absolute inset-x-0 top-6 h-12 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40">
              <div className="flex items-center gap-2 bg-white/40 backdrop-blur-3xl px-4 py-1.5 rounded-full border border-white/20 shadow-lg">
-                <MousePointer2 size={14} className="text-[#A67C00] animate-bounce" />
+                <MousePointer2 size={14} className="text-[#02210a] animate-bounce" />
                 <span className="text-[8px] font-black uppercase tracking-widest text-black/80">Scroll Cinematic Hub</span>
              </div>
           </div>

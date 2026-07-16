@@ -188,7 +188,7 @@ export default function DestinationJourney({ destination, allPackages }: Props) 
             <svg
               viewBox={`0 0 100 ${totalHeight}`}
               preserveAspectRatio="none"
-              className="w-full h-full opacity-60"
+              className="w-full h-full"
               fill="none"
             >
               <path
@@ -205,7 +205,7 @@ export default function DestinationJourney({ destination, allPackages }: Props) 
                     pathsRef.current[i] = el;
                   }}
                   d={d}
-                  stroke={destination.color}
+                  stroke={destination.color || "#85ca2c"}
                   strokeWidth="2"
                   strokeLinecap="round"
                   fill="none"
@@ -310,10 +310,10 @@ export default function DestinationJourney({ destination, allPackages }: Props) 
                               <Link
                                 key={pkg.id}
                                 href={`/packages/${pkg.id}`}
-                                className="group/pkg flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-black/10 hover:border-[#A67C00]/40 hover:shadow-md transition-all duration-300"
+                                className="group/pkg flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-black/10 hover:border-[#02210a]/40 hover:shadow-md transition-all duration-300"
                               >
                                 <div className="space-y-0">
-                                  <p className="text-[8px] font-black tracking-widest uppercase text-[#A67C00]">
+                                  <p className="text-[8px] font-black tracking-widest uppercase text-[#02210a]">
                                     {pkg.duration}
                                   </p>
                                   <p className="text-[11px] font-serif font-black text-[#1A1A1A] leading-none">
@@ -322,7 +322,7 @@ export default function DestinationJourney({ destination, allPackages }: Props) 
                                 </div>
                                 <ArrowUpRight
                                   size={10}
-                                  className="text-[#1A1A1A]/20 group-hover/pkg:text-[#A67C00] transition-colors"
+                                  className="text-[#1A1A1A]/20 group-hover/pkg:text-[#02210a] transition-colors"
                                 />
                               </Link>
                             ))}
@@ -432,8 +432,8 @@ export default function DestinationJourney({ destination, allPackages }: Props) 
                 className="flex-1 overflow-y-auto p-10 pb-20 space-y-8 overscroll-contain"
               >
                 <div className="space-y-4">
-                  <div className="w-12 h-0.5 bg-[#A67C00]/30" />
-                  <p className="text-xl font-serif italic text-[#A67C00] font-light">
+                  <div className="w-12 h-0.5 bg-[#02210a]/30" />
+                  <p className="text-xl font-serif italic text-[#02210a] font-light">
                     {selectedPlace.subtitle}
                   </p>
                 </div>
@@ -446,10 +446,10 @@ export default function DestinationJourney({ destination, allPackages }: Props) 
 
                 {/* Suggest a package link */}
                 <div className="pt-10">
-                  <div className="p-8 rounded-[2rem] bg-[#FCF9F2] border border-black/5 group cursor-pointer hover:border-[#A67C00]/20 transition-all">
+                  <div className="p-8 rounded-[2rem] bg-[#FCF9F2] border border-black/5 group cursor-pointer hover:border-[#02210a]/20 transition-all">
                     <p className="text-[8px] font-black tracking-[0.3em] uppercase text-black/30 mb-4">Journey Inspiration</p>
                     <h4 className="text-xl font-serif font-black text-[#1A1A1A] mb-2 leading-tight">Visit {selectedPlace.name} with Serendivia</h4>
-                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#A67C00]">
+                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#02210a]">
                       Explore Packages <ArrowRight size={12} className="group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>

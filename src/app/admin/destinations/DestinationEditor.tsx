@@ -184,7 +184,7 @@ export default function DestinationEditor({
         <div className="flex items-center gap-4">
           <div
             className="w-4 h-4 rounded-full ring-2 ring-white/10"
-            style={{ backgroundColor: destination.color || "#A67C00" }}
+            style={{ backgroundColor: destination.color || "#02210a" }}
           />
           <div>
             <h1 className="text-3xl font-serif font-black text-white">{initial.slug ? destination.name : "Create New Destination"}</h1>
@@ -251,7 +251,7 @@ export default function DestinationEditor({
               onDragOver={(e) => handleDragOver(e, index)}
               onDragEnd={handleDragEnd}
               className={`bg-white/[0.02] border border-white/5 rounded-xl overflow-hidden transition-all ${
-                draggedIndex === index ? "opacity-50 border-[#A67C00]/30" : "hover:border-white/10"
+                draggedIndex === index ? "opacity-50 border-[#02210a]/30" : "hover:border-white/10"
               }`}
             >
               <div className="flex items-center gap-4 p-4">
@@ -307,13 +307,13 @@ export default function DestinationEditor({
           {!addingPlace ? (
             <button
               onClick={() => setAddingPlace(true)}
-              className="w-full py-4 border-2 border-dashed border-white/[0.06] rounded-xl text-sm text-white/30 hover:text-[#A67C00] hover:border-[#A67C00]/30 transition-all"
+              className="w-full py-4 border-2 border-dashed border-white/[0.06] rounded-xl text-sm text-white/30 hover:text-[#02210a] hover:border-[#02210a]/30 transition-all"
             >
               + Add Nearby Place
             </button>
           ) : (
-            <div className="bg-white/[0.02] border border-[#A67C00]/20 rounded-xl p-6">
-              <h4 className="text-[10px] uppercase tracking-[0.4em] text-[#A67C00] font-bold mb-5">
+            <div className="bg-white/[0.02] border border-[#02210a]/20 rounded-xl p-6">
+              <h4 className="text-[10px] uppercase tracking-[0.4em] text-[#02210a] font-bold mb-5">
                 New Nearby Place
               </h4>
               <NearbyPlaceForm
@@ -430,13 +430,13 @@ function FactsEditor({
             value={fact.label}
             onChange={(e) => updateFact(i, "label", e.target.value)}
             placeholder="Label"
-            className="flex-1 bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 transition-all"
+            className="flex-1 bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 transition-all"
           />
           <input
             value={fact.value}
             onChange={(e) => updateFact(i, "value", e.target.value)}
             placeholder="Value"
-            className="flex-1 bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 transition-all"
+            className="flex-1 bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 transition-all"
           />
           <button
             onClick={() => removeFact(i)}
@@ -448,7 +448,7 @@ function FactsEditor({
       ))}
       <button
         onClick={addFact}
-        className="w-full py-3 border border-dashed border-white/[0.06] rounded-xl text-[11px] text-white/30 hover:text-[#A67C00] hover:border-[#A67C00]/30 transition-all"
+        className="w-full py-3 border border-dashed border-white/[0.06] rounded-xl text-[11px] text-white/30 hover:text-[#02210a] hover:border-[#02210a]/30 transition-all"
       >
         + Add Fact
       </button>
@@ -456,7 +456,7 @@ function FactsEditor({
         <button
           onClick={() => onSave(facts)}
           disabled={saving}
-          className="px-8 py-3.5 bg-[#A67C00] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
+          className="px-8 py-3.5 bg-[#02210a] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
         >
           {saving ? "Saving…" : "Save Facts"}
         </button>

@@ -115,7 +115,7 @@ export default function ChronicleEditor({ chronicle: initial, destinations }: Pr
           <button 
             onClick={handleSave}
             disabled={saving}
-            className="px-8 py-3.5 bg-[#A67C00] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-full transition-all duration-500 shadow-xl shadow-[#A67C00]/10 flex items-center gap-3"
+            className="px-8 py-3.5 bg-[#02210a] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-full transition-all duration-500 shadow-xl shadow-[#02210a]/10 flex items-center gap-3"
           >
             <Save size={14} />
             {saving ? "Saving..." : (isNew ? "Publish Story" : "Save Changes")}
@@ -141,7 +141,7 @@ export default function ChronicleEditor({ chronicle: initial, destinations }: Pr
                   value={chronicle.title}
                   onChange={e => update({ title: e.target.value })}
                   placeholder="The Celestial Mystery of..."
-                  className="w-full bg-transparent text-2xl font-serif font-black text-white placeholder-white/10 outline-none border-b border-white/5 pb-2 focus:border-[#A67C00] transition-colors"
+                  className="w-full bg-transparent text-2xl font-serif font-black text-white placeholder-white/10 outline-none border-b border-white/5 pb-2 focus:border-[#02210a] transition-colors"
                 />
                 <textarea 
                   value={chronicle.excerpt}
@@ -180,7 +180,7 @@ export default function ChronicleEditor({ chronicle: initial, destinations }: Pr
                       onClick={() => update({ category: c as any })}
                       className={`px-4 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest border transition-all ${
                         chronicle.category === c
-                          ? "bg-[#A67C00]/20 border-[#A67C00]/40 text-[#A67C00]"
+                          ? "bg-[#02210a]/20 border-[#02210a]/40 text-[#02210a]"
                           : "bg-white/[0.02] border-white/5 text-white/30 hover:border-white/15"
                       }`}
                     >
@@ -206,21 +206,21 @@ export default function ChronicleEditor({ chronicle: initial, destinations }: Pr
                 <input 
                   value={chronicle.author}
                   onChange={e => update({ author: e.target.value })}
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#A67C00]"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#02210a]"
                 />
               </MetaField>
               <MetaField label="Date Headline">
                 <input 
                   value={chronicle.date}
                   onChange={e => update({ date: e.target.value })}
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#A67C00]"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#02210a]"
                 />
               </MetaField>
               <MetaField label="Read Time">
                 <input 
                   value={chronicle.readTime}
                   onChange={e => update({ readTime: e.target.value })}
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#A67C00]"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#02210a]"
                 />
               </MetaField>
             </div>
@@ -233,7 +233,7 @@ export default function ChronicleEditor({ chronicle: initial, destinations }: Pr
                   value={chronicle.image}
                   onChange={e => update({ image: e.target.value })}
                   placeholder="https://..."
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#A67C00]"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#02210a]"
                 />
               </MetaField>
               {chronicle.image && (
@@ -252,7 +252,7 @@ export default function ChronicleEditor({ chronicle: initial, destinations }: Pr
                   onChange={e => update({ slug: e.target.value })}
                   placeholder="my-story-slug"
                   disabled={!isNew}
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#A67C00] disabled:opacity-40"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-[#02210a] disabled:opacity-40"
                 />
               </MetaField>
             </div>
@@ -334,7 +334,7 @@ function DestinationSelector({
                       {d.name}
                     </span>
                   </div>
-                  {value === d.slug && <Check size={14} className="text-[#A67C00]" />}
+                  {value === d.slug && <Check size={14} className="text-[#02210a]" />}
                 </button>
               ))}
             </motion.div>
@@ -359,7 +359,7 @@ function EditorCard({ title, children }: { title: string; children: React.ReactN
 function MetaField({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="space-y-2">
-      <label className="block text-[9px] uppercase tracking-widest text-[#A67C00] font-black">{label}</label>
+      <label className="block text-[9px] uppercase tracking-widest text-[#02210a] font-black">{label}</label>
       {children}
     </div>
   );

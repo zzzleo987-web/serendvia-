@@ -159,10 +159,10 @@ export default function Navbar() {
     : "bg-[#0A0A0A]/85 border-b border-white/5 shadow-lg";
 
   const textColor = isLightPage ? "text-[#1A1A1A]" : "text-white";
-  const linkColor = isLightPage ? "text-[#1A1A1A]/70 hover:text-[#A67C00]" : "text-white/70 hover:text-white";
+  const linkColor = isLightPage ? "text-[#1A1A1A]/70 hover:text-[#02210a]" : "text-white/70 hover:text-white";
   const iconBorder = isLightPage
     ? "border-transparent bg-black/5 hover:bg-black/10 text-[#1A1A1A]/70"
-    : "border-transparent bg-white/5 hover:bg-white/10 text-white/80 hover:text-[#A67C00]";
+    : "border-transparent bg-white/5 hover:bg-white/10 text-white/80 hover:text-[#02210a]";
 
   // Compute a single navbar background class to keep colors consistent with theme
   const navBg = isLightPage
@@ -183,7 +183,7 @@ export default function Navbar() {
           {/* Left: Logo */}
           <div className="flex items-center pl-3 md:pl-5">
             <Link href="/" className="block transition-opacity duration-300 hover:opacity-80">
-              <Image src="/logoo.png" alt="Serendivia" width={137} height={32} className="h-8 md:h-10 w-auto" priority />
+              <Image src="/logoo.png" alt="Serendivia" width={137} height={32} className="h-8 md:h-10 w-auto" style={{ width: "auto", height: "auto" }} quality={60} priority />
             </Link>
           </div>
 
@@ -208,14 +208,14 @@ export default function Navbar() {
                   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setCurrencyOpen(!currencyOpen); }
                   if (e.key === 'ArrowDown') { e.preventDefault(); setCurrencyOpen(true); const first = currencyRef.current?.querySelector('button[data-currency]') as HTMLElement; first?.focus(); }
                 }}
-                className="px-2 py-1 bg-[#121212] text-[#d4af37] rounded-full text-[10px] font-semibold transition flex items-center gap-2 border border-[#d4af37]/20"
+                className="px-2 py-1 bg-[#121212] text-[#007a27] rounded-full text-[10px] font-semibold transition flex items-center gap-2 border border-[#007a27]/20"
                 aria-haspopup="menu"
                 aria-expanded={currencyOpen}
                 aria-label="Select currency"
               >
-                <span className="inline-flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#d4af37]/10 text-[9px] font-semibold text-[#d4af37]">{CURRENCIES.find(c => c.code === currency)?.symbol}</span>
+                <span className="inline-flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#007a27]/10 text-[9px] font-semibold text-[#007a27]">{CURRENCIES.find(c => c.code === currency)?.symbol}</span>
                 <span className="tracking-wide text-[10px]">{currency}</span>
-                <ChevronDown size={12} className="opacity-70 text-[#d4af37]" />
+                <ChevronDown size={12} className="opacity-70 text-[#007a27]" />
               </button>
 
               <AnimatePresence>
@@ -224,7 +224,7 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: -6 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
-                    className="absolute top-12 right-0 min-w-[150px] rounded-[24px] p-1 bg-[#080909] border border-[#d4af37]/15 text-slate-100 shadow-[0_18px_50px_rgba(0,0,0,0.24)] z-50"
+                    className="absolute top-12 right-0 min-w-[150px] rounded-[24px] p-1 bg-[#080909] border border-[#007a27]/15 text-slate-100 shadow-[0_18px_50px_rgba(0,0,0,0.24)] z-50"
                     role="menu"
                   >
                     {CURRENCIES.map((c, idx) => (
@@ -238,14 +238,14 @@ export default function Navbar() {
                           else if (e.key === 'ArrowUp') { e.preventDefault(); const prev = (e.currentTarget.previousElementSibling as HTMLElement); if (prev) prev.focus(); else (currencyRef.current?.querySelector('button[data-toggle]') as HTMLElement)?.focus(); }
                           else if (e.key === 'Escape') { setCurrencyOpen(false); (currencyRef.current?.querySelector('button[data-toggle]') as HTMLElement)?.focus(); }
                         }}
-                        className={`w-full text-left px-2 py-1.5 rounded-2xl text-[10px] flex items-center justify-between ${currency === c.code ? 'bg-[#121416] text-[#f5e4af] font-semibold' : 'text-slate-300 hover:bg-[#141619]'} ${idx > 0 ? 'mt-1' : ''}`}
+                        className={`w-full text-left px-2 py-1.5 rounded-2xl text-[10px] flex items-center justify-between ${currency === c.code ? 'bg-[#121416] text-[#EBF6E4] font-semibold' : 'text-slate-300 hover:bg-[#141619]'} ${idx > 0 ? 'mt-1' : ''}`}
                         role="menuitem"
                       >
                         <div className="flex items-center gap-2">
-                          <span className="inline-flex h-5 w-5 items-center justify-center rounded-2xl bg-[#2f2a18] text-[10px] font-semibold text-[#d4af37]">{c.symbol}</span>
-                          <span className="text-[10px] uppercase tracking-[0.16em] text-[#e6d29d]">{c.code}</span>
+                          <span className="inline-flex h-5 w-5 items-center justify-center rounded-2xl bg-[#2f2a18] text-[10px] font-semibold text-[#007a27]">{c.symbol}</span>
+                          <span className="text-[10px] uppercase tracking-[0.16em] text-[#DDEFD0]">{c.code}</span>
                         </div>
-                        {currency === c.code ? <Check size={12} className="text-[#d4af37]" /> : null}
+                        {currency === c.code ? <Check size={12} className="text-[#007a27]" /> : null}
                       </button>
                     ))}
                   </motion.div>
@@ -260,7 +260,7 @@ export default function Navbar() {
             {/* Status Widget (Pulse & Temp) - Hidden on small screens */}
             <div className="hidden xl:flex items-center gap-4 pr-3 mr-1 border-r border-current opacity-30">
               <div className="flex items-center gap-1.5">
-                <Sun size={12} className="text-[#A67C00] animate-pulse" />
+                <Sun size={12} className="text-[#02210a] animate-pulse" />
                 <span className={`text-[11px] font-serif font-black tracking-wider ${textColor}`}>{time}</span>
               </div>
             </div>
@@ -312,7 +312,7 @@ export default function Navbar() {
                           }`}
                       >
                         <div className="px-4 py-3 border-b border-black/[0.03] dark:border-white/[0.03] mb-1">
-                          <p className={`text-[8px] font-black uppercase tracking-widest text-[#A67C00] mb-0.5`}>Signed in as</p>
+                          <p className={`text-[8px] font-black uppercase tracking-widest text-[#02210a] mb-0.5`}>Signed in as</p>
                           <p className={`text-xs font-serif font-black truncate ${textColor}`}>{session.name}</p>
                         </div>
 
@@ -323,7 +323,7 @@ export default function Navbar() {
                             className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${isLightPage ? "text-black/60 hover:bg-black/[0.03]" : "text-white/60 hover:bg-white/[0.03]"
                               }`}
                           >
-                            <Layout size={14} className="text-[#A67C00]" />
+                            <Layout size={14} className="text-[#02210a]" />
                             <span className="text-[10px] font-black uppercase tracking-widest">Admin Panel</span>
                           </Link>
                         )}
@@ -334,7 +334,7 @@ export default function Navbar() {
                           className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${isLightPage ? "text-black/60 hover:bg-black/[0.03]" : "text-white/60 hover:bg-white/[0.03]"
                             }`}
                         >
-                          <Settings size={14} className="text-[#A67C00]" />
+                          <Settings size={14} className="text-[#02210a]" />
                           <span className="text-[10px] font-black uppercase tracking-widest">Settings</span>
                         </Link>
 
@@ -370,8 +370,7 @@ export default function Navbar() {
             </button>
 
             {/* Primary Explore CTA (Desktop) */}
-            <Link href="/explore" className={`hidden lg:flex ml-2 px-6 py-3 rounded-lg items-center justify-center text-[10px] font-black uppercase tracking-widest transition-all duration-300 ${isLightPage ? "bg-[#1A1A1A] text-white hover:bg-black" : "bg-white text-black hover:bg-white/90"
-              } hover:scale-105 active:scale-95 shadow-lg`}>
+            <Link href="/explore" className="hidden lg:flex ml-2 px-6 py-3 rounded-lg items-center justify-center text-[10px] font-black uppercase tracking-widest transition-all duration-300 bg-gradient-to-r from-[#00ff52] to-[#007a27] text-black shadow-[0_4px_20px_rgba(0,255,82,0.4)] hover:scale-105 active:scale-95 hover:from-white hover:to-white hover:shadow-[0_4px_25px_rgba(255,255,255,0.6)]">
               EXPLORE
             </Link>
           </div>
@@ -389,7 +388,7 @@ export default function Navbar() {
           >
             <div className="w-full max-w-5xl mx-auto">
               <div className="flex items-center justify-between mb-24">
-                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#A67C00]">Search Journeys</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#02210a]">Search Journeys</span>
                 <button
                   onClick={() => setIsSearchOpen(false)}
                   className="p-3 rounded-full border border-white/10 text-white/50 hover:text-white transition-colors"
@@ -399,13 +398,13 @@ export default function Navbar() {
               </div>
 
               <div className="relative group">
-                <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-[#A67C00] transition-transform group-focus-within:scale-110" size={32} />
-                <div className="flex flex-wrap items-center gap-3 w-full bg-transparent border-b-2 border-white/10 py-6 pl-16 focus-within:border-[#A67C00] transition-colors">
+                <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-[#02210a] transition-transform group-focus-within:scale-110" size={32} />
+                <div className="flex flex-wrap items-center gap-3 w-full bg-transparent border-b-2 border-white/10 py-6 pl-16 focus-within:border-[#02210a] transition-colors">
                   {selectedTags.map(tag => (
                     <button
                       key={tag}
                       onClick={() => toggleTag(tag)}
-                      className="flex items-center gap-2 rounded-full border border-[#A67C00]/30 bg-[#A67C00]/10 px-4 py-2 hover:bg-[#A67C00]/20 transition-colors"
+                      className="flex items-center gap-2 rounded-full border border-[#02210a]/30 bg-[#02210a]/10 px-4 py-2 hover:bg-[#02210a]/20 transition-colors"
                     >
                       <span className="text-sm font-semibold text-white">{tag}</span>
                       <X size={14} className="text-white/50" />
@@ -458,12 +457,12 @@ export default function Navbar() {
 
               <div className="flex items-start justify-between gap-4 pb-4 border-b border-white/10">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#A67C00]">Explore Ceylon</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#02210a]">Explore Ceylon</p>
                   <p className="mt-2 text-sm text-white/70">Discover destinations, stories, and plans.</p>
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition hover:text-white hover:border-[#A67C00]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition hover:text-white hover:border-[#02210a]"
                   aria-label="Close menu"
                 >
                   <X size={20} />
@@ -476,15 +475,15 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="group flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-3 text-base font-semibold text-white transition hover:border-[#A67C00]/30 hover:bg-white/10"
+                    className="group flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-3 text-base font-semibold text-white transition hover:border-[#02210a]/30 hover:bg-white/10"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[1rem] bg-white/5 text-[#A67C00] transition group-hover:bg-[#A67C00]/10">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[1rem] bg-white/5 text-[#02210a] transition group-hover:bg-[#02210a]/10">
                         <link.icon size={18} />
                       </div>
                       <span>{link.name}</span>
                     </div>
-                    <ChevronRight size={18} className="text-white/50 transition group-hover:text-[#A67C00]" />
+                    <ChevronRight size={18} className="text-white/50 transition group-hover:text-[#02210a]" />
                   </Link>
                 ))}
               </nav>
@@ -492,7 +491,7 @@ export default function Navbar() {
               <div className="mt-8 space-y-4">
                 <div className="grid grid-cols-2 gap-3">
                   <button className="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/10 bg-white/5 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white/80 transition hover:bg-white/10">
-                    <Globe size={16} className="text-[#A67C00]" />
+                    <Globe size={16} className="text-[#02210a]" />
                     EN
                   </button>
                   <Link
@@ -500,7 +499,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/10 bg-white/5 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white/80 transition hover:bg-white/10"
                   >
-                    <LogIn size={16} className="text-[#A67C00]" />
+                    <LogIn size={16} className="text-[#02210a]" />
                     Sign In
                   </Link>
                 </div>
@@ -508,7 +507,7 @@ export default function Navbar() {
                 <Link
                   href="/explore"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block rounded-full bg-[#1F76BB] px-5 py-4 text-center text-sm font-black uppercase tracking-[0.35em] text-white shadow-[0_24px_60px_rgba(31,118,187,0.28)] transition hover:bg-[#1C69A8]"
+                  className="block rounded-full bg-gradient-to-r from-[#00ff52] to-[#007a27] px-5 py-4 text-center text-sm font-black uppercase tracking-[0.35em] text-black shadow-[0_4px_20px_rgba(0,255,82,0.4)] transition hover:from-white hover:to-white hover:shadow-[0_4px_25px_rgba(255,255,255,0.6)]"
                 >
                   Book Your Journey
                 </Link>

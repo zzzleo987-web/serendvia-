@@ -29,7 +29,7 @@ export default function FloatingConcierge() {
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="bg-white/90 backdrop-blur-xl border border-[#A67C00]/20 p-4 rounded-2xl rounded-br-sm shadow-2xl shadow-black/10 max-w-[240px] relative mb-2"
+            className="bg-white/90 backdrop-blur-xl border border-[#02210a]/20 p-4 rounded-2xl rounded-br-sm shadow-2xl shadow-black/10 max-w-[240px] relative mb-2"
           >
             <button 
               onClick={() => setShowInvitation(false)}
@@ -57,7 +57,7 @@ export default function FloatingConcierge() {
         </div>
 
         {/* Animated Background Glow */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#A67C00]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#02210a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         
         <MessageSquare size={24} className="relative z-10 transition-transform group-hover:-translate-y-0.5 group-hover:scale-110" />
 

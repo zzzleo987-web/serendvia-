@@ -13,7 +13,7 @@ const destinations = [
     name: "Sigiriya",
     title: "Lion Rock",
     desc: "A sky palace rising from the emerald canopy.",
-    color: "#D4AF37", // Gold
+    color: "#007a27", // Gold
     image: "/images/hero.png",
     px: 20, py: 25, side: "right"
   },

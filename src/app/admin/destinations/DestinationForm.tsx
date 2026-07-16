@@ -94,7 +94,7 @@ export default function DestinationForm({
         />
         {!destination.slug && (
           <p className="text-[10px] text-white/20 mt-1.5 flex items-center gap-1.5 font-medium">
-            <span className="text-[#A67C00]">⚡</span>
+            <span className="text-[#02210a]">⚡</span>
             Automatically generated from name if left empty. Used for the URL: /explore/<b>{form.slug || "slug"}</b>
           </p>
         )}
@@ -113,7 +113,7 @@ export default function DestinationForm({
               onChange={(e) => set("color", e.target.value)}
               className="w-12 h-10 rounded-lg border border-white/10 cursor-pointer bg-transparent"
             />
-            <Input value={form.color} onChange={(v) => set("color", v)} placeholder="#D4AF37" required />
+            <Input value={form.color} onChange={(v) => set("color", v)} placeholder="#007a27" required />
             <div
               className="w-10 h-10 rounded-lg border border-white/10 flex-shrink-0"
               style={{ backgroundColor: form.color }}
@@ -166,7 +166,7 @@ export default function DestinationForm({
               onClick={() => set("preferredHeroType", type)}
               className={`px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-widest border transition-all ${
                 form.preferredHeroType === type
-                  ? "bg-[#A67C00]/20 border-[#A67C00]/40 text-[#A67C00]"
+                  ? "bg-[#02210a]/20 border-[#02210a]/40 text-[#02210a]"
                   : "border-white/10 text-white/30 hover:border-white/25"
               }`}
             >
@@ -186,7 +186,7 @@ export default function DestinationForm({
               onClick={() => togglePackage(pkg.id)}
               className={`px-3.5 py-2 rounded-xl text-[11px] border transition-all ${
                 form.packageIds.includes(pkg.id)
-                  ? "bg-[#A67C00]/15 border-[#A67C00]/30 text-[#A67C00]"
+                  ? "bg-[#02210a]/15 border-[#02210a]/30 text-[#02210a]"
                   : "border-white/8 text-white/30 hover:border-white/20"
               }`}
             >
@@ -201,7 +201,7 @@ export default function DestinationForm({
         <button
           type="submit"
           disabled={saving}
-          className="px-8 py-3.5 bg-[#A67C00] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
+          className="px-8 py-3.5 bg-[#02210a] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
         >
           {saving ? "Saving…" : "Save Changes"}
         </button>
@@ -216,7 +216,7 @@ function Field({ label, children, required }: { label: string; children: React.R
   return (
     <div>
       <label className="block text-[10px] uppercase tracking-[0.35em] text-white/40 mb-2">
-        {label}{required && <span className="text-[#A67C00] ml-1">*</span>}
+        {label}{required && <span className="text-[#02210a] ml-1">*</span>}
       </label>
       {children}
     </div>
@@ -234,7 +234,7 @@ function Input({ value, onChange, placeholder, required, type = "text", disabled
       placeholder={placeholder}
       required={required}
       disabled={disabled}
-      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 focus:ring-1 focus:ring-[#A67C00]/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 focus:ring-1 focus:ring-[#02210a]/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
     />
   );
 }
@@ -249,7 +249,7 @@ function Textarea({ value, onChange, rows = 3, placeholder, required }: {
       rows={rows}
       placeholder={placeholder}
       required={required}
-      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 focus:ring-1 focus:ring-[#A67C00]/20 transition-all resize-none"
+      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 focus:ring-1 focus:ring-[#02210a]/20 transition-all resize-none"
     />
   );
 }

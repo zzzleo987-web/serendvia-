@@ -12,7 +12,7 @@ const destinations = [
     name: "Sigiriya",
     title: "Lion Rock Citadel",
     desc: "A sky palace of ancient kings, rising from the emerald canopy of the central plains.",
-    color: "#D4AF37", // Heritage Gold
+    color: "#007a27", // Heritage Gold
     image: "/images/hero.png",
     video: "https://pub-92b2e88087224d958d5220e54f57639e.r2.dev/Sigiriya.mp4",
     poster: "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&q=80&w=800",
@@ -28,7 +28,7 @@ const destinations = [
     color: "#1E3A8A", // Deep Temple Blue
     image: "/images/hero.png",
     video: "https://pub-92b2e88087224d958d5220e54f57639e.r2.dev/Kandy.mp4",
-    poster: "https://images.unsplash.com/photo-1544984243-752762a45d07?auto=format&fit=crop&q=80&w=800",
+    poster: "/images/hero_poster.webp",
     side: "left",
     xNode: 20,
     region: "Central Highlands"
@@ -54,7 +54,7 @@ const destinations = [
     color: "#E11D48", // Crimson Coral
     image: "/images/hero.png",
     video: "https://pub-92b2e88087224d958d5220e54f57639e.r2.dev/Galle.mp4",
-    poster: "https://images.unsplash.com/photo-1586713753899-3171306e00f5?auto=format&fit=crop&q=80&w=800",
+    poster: "/images/hero_poster.webp",
     side: "left",
     xNode: 20,
     region: "Southern Coast"
@@ -93,103 +93,104 @@ export default function CurvedSpineJourney() {
 
         ctx = gsap.context(() => {
           pathsRef.current.forEach((path) => {
-        if (!path) return;
-        const length = path.getTotalLength();
-        gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
-      });
+            if (!path) return;
+            const length = path.getTotalLength();
+            gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
+          });
 
-      destinations.forEach((dest, i) => {
-        const section = document.querySelector(`.dest-section-${i}`);
-        const path = pathsRef.current[i];
+          destinations.forEach((dest, i) => {
+            const section = document.querySelector(`.dest-section-${i}`);
+            const path = pathsRef.current[i];
 
-        if (!section || !path) return;
+            if (!section || !path) return;
 
-        gsap.to(path, {
-          strokeDashoffset: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%",
-            end: "center 52%",
-            scrub: 0.5, // Smoothed scrub
-          }
-        });
+            gsap.to(path, {
+              strokeDashoffset: 0,
+              ease: "none",
+              scrollTrigger: {
+                trigger: section,
+                start: "top 85%",
+                end: "center 52%",
+                scrub: 0.5, // Smoothed scrub
+              }
+            });
 
-        gsap.to(`.dest-dot-${i}`, {
-          scale: 1,
-          opacity: 1,
-          duration: 0.4,
-          ease: "back.out(2)",
-          scrollTrigger: {
-            trigger: section,
-            start: "center 60%",
-            toggleActions: "play none none reverse"
-          }
-        });
+            gsap.to(`.dest-dot-${i}`, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.4,
+              ease: "back.out(2)",
+              scrollTrigger: {
+                trigger: section,
+                start: "center 60%",
+                toggleActions: "play none none reverse"
+              }
+            });
 
-        gsap.to(`.dest-name-${i}`, {
-          color: dest.color,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "center 55%",
-            toggleActions: "play none none reverse"
-          }
-        });
+            gsap.to(`.dest-name-${i}`, {
+              color: dest.color,
+              duration: 0.8,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "center 55%",
+                toggleActions: "play none none reverse"
+              }
+            });
 
-        // Parallax optimized with will-change and smooth scrub
-        gsap.to(`.dest-image-${i}`, {
-          yPercent: -8,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.5,
-          }
-        });
+            // Parallax optimized with will-change and smooth scrub
+            gsap.to(`.dest-image-${i}`, {
+              yPercent: -8,
+              ease: "none",
+              scrollTrigger: {
+                trigger: section,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 0.5,
+              }
+            });
 
-        const motionTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "center 75%",
-            toggleActions: "play none none reverse"
-          }
-        });
+            const motionTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: section,
+                start: "center 75%",
+                toggleActions: "play none none reverse"
+              }
+            });
 
-        motionTl.fromTo(`.dest-text-group-${i} > *`,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power2.out" }
-        )
-          .fromTo(`.dest-img-wrap-${i}`,
-            { opacity: 0, scale: 0.9, rotation: dest.side === 'right' ? 1 : -1 },
-            { opacity: 1, scale: 1, rotation: 0, duration: 1, ease: "power3.out" },
-            "-=0.6"
-          )
-          .fromTo(`.dest-image-${i}`,
-            { scale: 1.15 },
-            { scale: 1, duration: 1.5, ease: "power2.out" },
-            "-=1.2"
-          );
-      });
+            motionTl.fromTo(`.dest-text-group-${i} > *`,
+              { opacity: 0, y: 30 },
+              { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power2.out" }
+            )
+              .fromTo(`.dest-img-wrap-${i}`,
+                { opacity: 0, scale: 0.9, rotation: dest.side === 'right' ? 1 : -1 },
+                { opacity: 1, scale: 1, rotation: 0, duration: 1, ease: "power3.out" },
+                "-=0.6"
+              )
+              .fromTo(`.dest-image-${i}`,
+                { scale: 1.15 },
+                { scale: 1, duration: 1.5, ease: "power2.out" },
+                "-=1.2"
+              );
+          });
 
-      // Floating decor optimization
-      gsap.utils.toArray<HTMLElement>(".floating-decor").forEach((decor, i) => {
-        gsap.to(decor, {
-          yPercent: -150,
-          rotation: i % 2 === 0 ? 30 : -30,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.5
-          }
-        });
-      });
-    }, containerRef);
-    })});
+          // Floating decor optimization
+          gsap.utils.toArray<HTMLElement>(".floating-decor").forEach((decor, i) => {
+            gsap.to(decor, {
+              yPercent: -150,
+              rotation: i % 2 === 0 ? 30 : -30,
+              ease: "none",
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.5
+              }
+            });
+          });
+        }, containerRef);
+      })
+    });
 
     // Optimized Video Management: Only play when visible
     const observerOptions = {
@@ -221,9 +222,9 @@ export default function CurvedSpineJourney() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full overflow-hidden bg-[#FCF9F2] py-0">
+    <section ref={containerRef} className="relative w-full overflow-hidden bg-white py-0">
       <div className="absolute top-24 left-1/2 -translate-x-1/2 text-center w-full z-10 px-4">
-        <h3 className="text-xs md:text-sm font-black tracking-[0.6em] text-[#A67C00]/60 uppercase mb-4">The Continuous Odyssey</h3>
+        <h3 className="text-xs md:text-sm font-black tracking-[0.6em] text-[#02210a]/60 uppercase mb-4">The Continuous Odyssey</h3>
         <h2 className="text-6xl md:text-[9rem] font-serif font-black text-black/5 leading-none tracking-tighter uppercase">
           A FLOWING DISCOVERY
         </h2>
@@ -231,15 +232,15 @@ export default function CurvedSpineJourney() {
 
       <div className="relative z-10 w-full flex flex-col gap-10 pt-44 pb-20 px-4 lg:hidden">
         {destinations.map((dest) => (
-          <div 
-            key={dest.id} 
+          <div
+            key={dest.id}
             className="relative mb-6"
             style={{ filter: "drop-shadow(0 0 2px rgba(0, 0, 0, 0.4)) drop-shadow(0 25px 45px rgba(15, 23, 42, 0.12)) drop-shadow(0 10px 20px rgba(15, 23, 42, 0.04))" }}
           >
-            
+
             {/* The Main Card with flawlessly engineered CSS Polygon Clip-Path cutout */}
-            <div 
-              className="relative bg-gradient-to-br from-slate-50 via-slate-100 to-[#EAE0C5]"
+            <div
+              className="relative bg-gradient-to-br from-slate-50 via-slate-100 to-[#DDF6E4]"
               style={{
                 clipPath: `polygon(
                   /* Top-Left (R=32) */
@@ -279,18 +280,18 @@ export default function CurvedSpineJourney() {
                   <Play size={16} />
                 </div>
               </div>
-              
+
               <div className="p-6 sm:p-7 pb-8 relative">
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                  <span className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A67C00]">Chapter {dest.id}</span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.35em] text-[#02210a]">Chapter {dest.id}</span>
                   <span className="text-[10px] font-black uppercase tracking-[0.45em] text-slate-500">{dest.name}</span>
                 </div>
                 <h3 className="text-3xl font-serif font-black text-slate-950 leading-tight mb-3">{dest.title}</h3>
                 <p className="text-sm leading-relaxed text-slate-600 mb-6">{dest.desc}</p>
-                
+
                 {/* Space on the right for the cutout */}
                 <div className="pr-[160px]">
-                   <span className="inline-flex items-center rounded-full bg-[#FEF3C7] px-4 py-2 text-[10px] font-black uppercase tracking-[0.35em] text-[#A67C00]">{dest.region}</span>
+                  <span className="inline-flex items-center rounded-full bg-[#DDF6E4] px-4 py-2 text-[10px] font-black uppercase tracking-[0.35em] text-[#02210a]">{dest.region}</span>
                 </div>
               </div>
             </div>
@@ -299,7 +300,7 @@ export default function CurvedSpineJourney() {
             <div className="absolute bottom-[12px] right-[12px] z-20">
               <Link
                 href={`/explore/${dest.name.toLowerCase()}`}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#A67C00] w-[136px] h-[48px] text-[11px] font-black uppercase tracking-[0.35em] text-white shadow-xl shadow-[#A67C00]/20 hover:bg-[#8f6b00] transition-all duration-300 active:scale-95"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#00ff52] to-[#007a27] text-black w-[136px] h-[48px] text-[11px] font-black uppercase tracking-[0.35em] shadow-[0_4px_20px_rgba(0,255,82,0.4)] hover:from-white hover:to-white hover:shadow-[0_4px_25px_rgba(255,255,255,0.6)] transition-all duration-300 active:scale-95"
               >
                 Explore
                 <ArrowUpRight size={13} strokeWidth={2.5} />
@@ -310,14 +311,14 @@ export default function CurvedSpineJourney() {
       </div>
 
       <div className="hidden lg:block absolute inset-0 z-0">
-        <svg viewBox="0 0 100 400" preserveAspectRatio="none" className="w-full h-full opacity-60 relative z-10">
+        <svg viewBox="0 0 100 400" preserveAspectRatio="none" className="w-full h-full relative z-10">
           <path d={pathSegments.join(" ")} stroke="#1A1A1A" strokeOpacity="0.05" strokeWidth="0.5" fill="none" />
           {pathSegments.map((d, i) => (
             <path
               key={i}
               ref={el => { pathsRef.current[i] = el }}
               d={d}
-              stroke="#A67C00"
+              stroke="#85ca2c"
               strokeWidth="2"
               strokeLinecap="round"
               fill="none"
@@ -326,8 +327,8 @@ export default function CurvedSpineJourney() {
           ))}
           {legends.map((leg, i) => (
             <g key={i}>
-              <circle cx={leg.x} cy={leg.y} r="1.5" fill="#A67C00" className="cursor-pointer transition-transform hover:scale-150" onClick={() => setActiveLegend(activeLegend === i ? null : i)} />
-              <circle cx={leg.x} cy={leg.y} r="3" fill="none" stroke="#A67C00" strokeWidth="0.2" className="animate-pulse" />
+              <circle cx={leg.x} cy={leg.y} r="1.5" fill="#02210a" className="cursor-pointer transition-transform hover:scale-150" onClick={() => setActiveLegend(activeLegend === i ? null : i)} />
+              <circle cx={leg.x} cy={leg.y} r="3" fill="none" stroke="#02210a" strokeWidth="0.2" className="animate-pulse" />
             </g>
           ))}
         </svg>
@@ -339,14 +340,14 @@ export default function CurvedSpineJourney() {
               initial={{ opacity: 0, y: 10, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="absolute z-[60] p-6 bg-white/90 backdrop-blur-xl rounded-2xl border border-[#A67C00]/30 max-w-[280px] shadow-2xl"
+              className="absolute z-[60] p-6 bg-white/90 backdrop-blur-xl rounded-2xl border border-[#02210a]/30 max-w-[280px] shadow-2xl"
               style={{
                 left: `${legends[activeLegend].x}%`,
                 top: `${(legends[activeLegend].y / 400) * 100}%`,
                 transform: 'translate(-50%, -120%)'
               }}
             >
-              <h4 className="text-[#A67C00] text-xs font-black tracking-widest uppercase mb-2">
+              <h4 className="text-[#02210a] text-xs font-black tracking-widest uppercase mb-2">
                 {legends[activeLegend].title}
               </h4>
               <p className="text-[10px] text-black/60 leading-relaxed italic">
@@ -392,8 +393,8 @@ export default function CurvedSpineJourney() {
 
                 <div className={`dest-text-group-${i} space-y-6 lg:space-y-8 w-full lg:flex-1 will-change-transform`}>
                   <div className={`flex items-center justify-center gap-6 ${dest.side === 'right' ? 'lg:justify-end' : 'lg:justify-start'}`}>
-                    <span className="text-[10px] lg:text-xs font-black tracking-[0.4em] text-[#A67C00]/50 uppercase">Chapter 0{dest.id}</span>
-                    <div className="w-16 h-[2px] bg-[#A67C00]/10" />
+                    <span className="text-[10px] lg:text-xs font-black tracking-[0.4em] text-[#02210a]/50 uppercase">Chapter 0{dest.id}</span>
+                    <div className="w-16 h-[2px] bg-[#02210a]/10" />
                   </div>
 
                   <h2 className={`dest-name-${i} text-6xl md:text-8xl lg:text-[8rem] font-serif font-black text-gray-800 leading-[0.9] tracking-tighter transition-colors duration-1000`}>
@@ -410,7 +411,7 @@ export default function CurvedSpineJourney() {
                   <div className={`flex ${dest.side === 'right' ? 'justify-center lg:justify-end' : 'justify-center lg:justify-start'} pt-2`}>
                     <Link
                       href={`/explore/${dest.name.toLowerCase()}`}
-                      className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[9px] font-black uppercase tracking-widest border border-[#A67C00]/30 text-[#A67C00] hover:bg-[#A67C00] hover:text-white transition-all duration-500 hover:scale-105 active:scale-95"
+                      className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[9px] font-black uppercase tracking-widest bg-gradient-to-r from-[#00ff52] to-[#007a27] text-black shadow-[0_4px_20px_rgba(0,255,82,0.4)] hover:from-white hover:to-white hover:shadow-[0_4px_25px_rgba(255,255,255,0.6)] transition-all duration-500 hover:scale-105 active:scale-95"
                     >
                       Explore {dest.name} <ArrowUpRight size={11} />
                     </Link>

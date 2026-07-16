@@ -12,7 +12,7 @@ export default function AdminDestinationsPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-10">
         <div>
-          <p className="text-[10px] uppercase tracking-[0.4em] text-[#A67C00] mb-2">Management</p>
+          <p className="text-[10px] uppercase tracking-[0.4em] text-[#02210a] mb-2">Management</p>
           <h1 className="text-3xl font-serif font-black text-white">Destinations</h1>
           <p className="text-sm text-white/30 mt-1">
             {destinations.length} destinations · {totalNearby} nearby places
@@ -20,7 +20,7 @@ export default function AdminDestinationsPage() {
         </div>
         <Link 
           href="/admin/destinations/new"
-          className="px-6 py-3 bg-[#A67C00] hover:bg-[#C9960C] text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-full transition-all duration-300 shadow-xl shadow-[#A67C00]/10 flex items-center gap-3"
+          className="px-6 py-3 bg-[#02210a] hover:bg-[#C9960C] text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-full transition-all duration-300 shadow-xl shadow-[#02210a]/10 flex items-center gap-3"
         >
           <span className="text-lg leading-none">+</span>
           New Destination
@@ -50,7 +50,7 @@ export default function AdminDestinationsPage() {
                     style={{ backgroundColor: dest.color }}
                   />
                   <div>
-                    <h2 className="text-lg font-serif font-bold text-white group-hover:text-[#A67C00] transition-colors">
+                    <h2 className="text-lg font-serif font-bold text-white group-hover:text-[#02210a] transition-colors">
                       {dest.name}
                     </h2>
                     <p className="text-[11px] text-white/30">{dest.tagline}</p>
@@ -69,19 +69,19 @@ export default function AdminDestinationsPage() {
               {/* Stats row */}
               <div className="flex items-center gap-4 text-[10px]">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[#A67C00]">◆</span>
+                  <span className="text-[#02210a]">◆</span>
                   <span className="text-white/40">
                     {dest.nearbyPlaces.length} nearby {dest.nearbyPlaces.length === 1 ? "place" : "places"}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[#A67C00]">✦</span>
+                  <span className="text-[#02210a]">✦</span>
                   <span className="text-white/40">
                     {dest.packageIds.length} {dest.packageIds.length === 1 ? "package" : "packages"}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[#A67C00]">◎</span>
+                  <span className="text-[#02210a]">◎</span>
                   <span className="text-white/40">{dest.facts.length} facts</span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function AdminDestinationsPage() {
             </div>
 
             {/* Hover arrow */}
-            <div className="absolute bottom-6 right-6 text-white/10 group-hover:text-[#A67C00] transition-all group-hover:translate-x-1">
+            <div className="absolute bottom-6 right-6 text-white/10 group-hover:text-[#02210a] transition-all group-hover:translate-x-1">
               →
             </div>
           </Link>

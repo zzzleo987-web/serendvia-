@@ -54,7 +54,7 @@ export default function DestinationPackages({ destination, packages }: Props) {
             >
               <Link
                 href={`/packages/${pkg.id}`}
-                className="group block relative overflow-hidden rounded-xl bg-[#FCF9F2] border border-black/5 hover:border-[#A67C00]/30 hover:shadow-lg transition-all duration-500"
+                className="group block relative overflow-hidden rounded-xl bg-[#FCF9F2] border border-black/5 hover:border-[#02210a]/30 hover:shadow-lg transition-all duration-500"
               >
                 {/* Top Image Strip */}
                 <div className="relative h-32 overflow-hidden">
@@ -78,10 +78,10 @@ export default function DestinationPackages({ destination, packages }: Props) {
                 {/* Content */}
                 <div className="p-5 space-y-3">
                   <div>
-                    <p className="text-[7px] font-black tracking-[0.4em] uppercase text-[#A67C00] mb-0.5">
+                    <p className="text-[7px] font-black tracking-[0.4em] uppercase text-[#02210a] mb-0.5">
                       {pkg.category}
                     </p>
-                    <h3 className="text-base font-serif font-black text-[#1A1A1A] leading-tight group-hover:text-[#A67C00] transition-colors duration-300">
+                    <h3 className="text-base font-serif font-black text-[#1A1A1A] leading-tight group-hover:text-[#02210a] transition-colors duration-300">
                       {pkg.title}
                     </h3>
                     <p className="text-[10px] text-[#1A1A1A]/40 font-serif italic mt-0.5 leading-relaxed line-clamp-2">
@@ -92,15 +92,15 @@ export default function DestinationPackages({ destination, packages }: Props) {
                   {/* Meta Row */}
                   <div className="flex items-center gap-3 border-t border-black/5 pt-3">
                     <div className="flex items-center gap-1 text-[8px] text-[#1A1A1A]/40 font-black uppercase tracking-wider">
-                      <Clock size={9} className="text-[#A67C00]" />
+                      <Clock size={9} className="text-[#02210a]" />
                       {pkg.duration}
                     </div>
                     <div className="flex items-center gap-1 text-[8px] text-[#1A1A1A]/40 font-black uppercase tracking-wider">
-                      <Users size={9} className="text-[#A67C00]" />
+                      <Users size={9} className="text-[#02210a]" />
                       Max {pkg.maxGroupSize}
                     </div>
                     <div className="flex items-center gap-1 text-[8px] text-[#1A1A1A]/40 font-black uppercase tracking-wider">
-                      <Zap size={9} className="text-[#A67C00]" />
+                      <Zap size={9} className="text-[#02210a]" />
                       {pkg.difficulty}
                     </div>
                   </div>
@@ -136,7 +136,7 @@ export default function DestinationPackages({ destination, packages }: Props) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="group relative overflow-hidden rounded-xl bg-white border border-dashed border-black/10 hover:border-[#A67C00]/30 transition-all duration-500 flex flex-col items-center justify-center p-8 text-center min-h-[300px]"
+            className="group relative overflow-hidden rounded-xl bg-white border border-dashed border-black/10 hover:border-[#02210a]/30 transition-all duration-500 flex flex-col items-center justify-center p-8 text-center min-h-[300px]"
           >
             <div 
               className="w-12 h-12 rounded-full flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110"

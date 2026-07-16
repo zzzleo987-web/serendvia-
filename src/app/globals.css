@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5F1E8;
-  /* Deep Luxury Ivory */
-  --foreground: #1A1A1A;
-  /* Deep Charcoal */
-  --primary: #A67C00;
-  /* Heritage Gold */
-  --secondary: #1A73E8;
-  /* Journey Blue */
+  --background: #FFFFFF;
+  /* Pure Luxury White */
+  --foreground: #02210a;
+  /* Deepest Forest Green */
+  --primary: #007a27;
+  /* Friendly Forest Green */
+  --secondary: #007526;
+  /* Rich Secondary Green */
+  --accent: #00ff52;
+  /* Neon Glowing Accent */
 }
 
 
@@ -17,6 +19,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 }
@@ -57,8 +60,8 @@ body {
   border: 1px solid rgb(255 255 255 / 0.15);
 }
 
-@utility shimmer-gold {
-  background: linear-gradient(90deg, #A67C00 0%, #D4AF37 50%, #A67C00 100%);
+@utility shimmer-emerald {
+  background: linear-gradient(90deg, #02210a 0%, #00ff52 50%, #02210a 100%);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;

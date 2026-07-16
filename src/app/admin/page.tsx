@@ -27,7 +27,7 @@ export default function AdminDashboard() {
     <div className="p-8 md:p-12">
       {/* Header */}
       <div className="mb-10">
-        <p className="text-[10px] uppercase tracking-[0.4em] text-[#A67C00] mb-2">Overview</p>
+        <p className="text-[10px] uppercase tracking-[0.4em] text-[#02210a] mb-2">Overview</p>
         <h1 className="text-3xl font-serif font-black text-white">Dashboard</h1>
         <p className="text-sm text-white/30 mt-1">Welcome back, Admin. Here&apos;s your at-a-glance summary.</p>
       </div>
@@ -56,7 +56,7 @@ export default function AdminDashboard() {
                 </div>
                 <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-[#A67C00] rounded-full"
+                    className="h-full bg-[#02210a] rounded-full"
                     style={{ width: `${(count / packages.length) * 100}%` }}
                   />
                 </div>
@@ -71,10 +71,10 @@ export default function AdminDashboard() {
           <div className="space-y-3">
             <Link
               href="/admin/packages/new"
-              className="flex items-center justify-between w-full px-5 py-4 bg-[#A67C00]/10 border border-[#A67C00]/20 rounded-xl hover:bg-[#A67C00]/20 transition-all text-sm text-white group"
+              className="flex items-center justify-between w-full px-5 py-4 bg-[#02210a]/10 border border-[#02210a]/20 rounded-xl hover:bg-[#02210a]/20 transition-all text-sm text-white group"
             >
               <span>+ Add New Package</span>
-              <span className="text-[#A67C00] group-hover:translate-x-1 transition-transform">→</span>
+              <span className="text-[#02210a] group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
               href="/admin/packages"
@@ -106,7 +106,7 @@ export default function AdminDashboard() {
       <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-sm font-bold text-white uppercase tracking-widest">All Packages</h2>
-          <Link href="/admin/packages" className="text-[10px] uppercase tracking-widest text-[#A67C00] hover:underline">
+          <Link href="/admin/packages" className="text-[10px] uppercase tracking-widest text-[#02210a] hover:underline">
             Manage →
           </Link>
         </div>
@@ -120,7 +120,7 @@ export default function AdminDashboard() {
               <div className="flex items-center gap-4">
                 <span className="text-sm font-serif font-bold text-white">${pkg.price.toLocaleString()}</span>
                 {pkg.featured && (
-                  <span className="px-2 py-0.5 rounded text-[9px] bg-[#A67C00]/20 text-[#A67C00] border border-[#A67C00]/30">
+                  <span className="px-2 py-0.5 rounded text-[9px] bg-[#02210a]/20 text-[#02210a] border border-[#02210a]/30">
                     Featured
                   </span>
                 )}

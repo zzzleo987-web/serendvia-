@@ -123,7 +123,7 @@ export default function PackageForm({
           <label className="flex items-center gap-3 cursor-pointer">
             <div
               onClick={() => set("featured", !form.featured)}
-              className={`relative w-11 h-6 rounded-full transition-colors duration-300 ${form.featured ? "bg-[#A67C00]" : "bg-white/10"}`}
+              className={`relative w-11 h-6 rounded-full transition-colors duration-300 ${form.featured ? "bg-[#02210a]" : "bg-white/10"}`}
             >
               <div className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform duration-300 ${form.featured ? "translate-x-6" : "translate-x-1"}`} />
             </div>
@@ -192,7 +192,7 @@ export default function PackageForm({
         <button
           type="submit"
           disabled={loading}
-          className="px-8 py-3.5 bg-[#A67C00] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
+          className="px-8 py-3.5 bg-[#02210a] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
         >
           {loading ? "Saving…" : mode === "create" ? "Create Package" : "Save Changes"}
         </button>
@@ -214,7 +214,7 @@ function Field({ label, children, required }: { label: string; children: React.R
   return (
     <div>
       <label className="block text-[10px] uppercase tracking-[0.35em] text-white/40 mb-2">
-        {label}{required && <span className="text-[#A67C00] ml-1">*</span>}
+        {label}{required && <span className="text-[#02210a] ml-1">*</span>}
       </label>
       {children}
     </div>
@@ -232,7 +232,7 @@ function Input({ value, onChange, type = "text", placeholder, required, min }: {
       placeholder={placeholder}
       required={required}
       min={min}
-      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 focus:ring-1 focus:ring-[#A67C00]/20 transition-all"
+      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 focus:ring-1 focus:ring-[#02210a]/20 transition-all"
     />
   );
 }
@@ -247,7 +247,7 @@ function Textarea({ value, onChange, rows = 3, placeholder, required }: {
       rows={rows}
       placeholder={placeholder}
       required={required}
-      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 focus:ring-1 focus:ring-[#A67C00]/20 transition-all resize-none"
+      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 focus:ring-1 focus:ring-[#02210a]/20 transition-all resize-none"
     />
   );
 }
@@ -259,7 +259,7 @@ function Select({ value, onChange, children }: {
     <select
       value={value ?? ""}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full bg-[#111] border border-white/8 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-[#A67C00]/60 transition-all"
+      className="w-full bg-[#111] border border-white/8 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-[#02210a]/60 transition-all"
     >
       {children}
     </select>

@@ -39,7 +39,7 @@ export default function PackagesTable({ packages: initial }: { packages: TourPac
       {packages.length === 0 ? (
         <div className="text-center py-24">
           <p className="text-white/30 mb-4">No packages yet.</p>
-          <Link href="/admin/packages/new" className="text-[#A67C00] underline">Create your first package →</Link>
+          <Link href="/admin/packages/new" className="text-[#02210a] underline">Create your first package →</Link>
         </div>
       ) : (
         <div className="space-y-3">
@@ -58,7 +58,7 @@ export default function PackagesTable({ packages: initial }: { packages: TourPac
                 <div className="flex items-center gap-2 mb-0.5">
                   <span className="text-sm font-semibold text-white truncate">{pkg.title}</span>
                   {pkg.badge && (
-                    <span className="px-2 py-0.5 rounded text-[9px] bg-[#A67C00]/20 text-[#A67C00] border border-[#A67C00]/30 flex-shrink-0">
+                    <span className="px-2 py-0.5 rounded text-[9px] bg-[#02210a]/20 text-[#02210a] border border-[#02210a]/30 flex-shrink-0">
                       {pkg.badge}
                     </span>
                   )}
@@ -72,7 +72,7 @@ export default function PackagesTable({ packages: initial }: { packages: TourPac
                 title="Toggle featured"
                 className={`px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest border transition-all ${
                   pkg.featured
-                    ? "bg-[#A67C00]/20 border-[#A67C00]/40 text-[#A67C00]"
+                    ? "bg-[#02210a]/20 border-[#02210a]/40 text-[#02210a]"
                     : "border-white/10 text-white/25 hover:border-white/25"
                 }`}
               >

@@ -176,7 +176,7 @@ export default function NearbyPlaceForm({
               onClick={() => togglePackage(pkg.id)}
               className={`px-3.5 py-2 rounded-xl text-[11px] border transition-all ${
                 form.packageIds.includes(pkg.id)
-                  ? "bg-[#A67C00]/15 border-[#A67C00]/30 text-[#A67C00]"
+                  ? "bg-[#02210a]/15 border-[#02210a]/30 text-[#02210a]"
                   : "border-white/8 text-white/30 hover:border-white/20"
               }`}
             >
@@ -191,7 +191,7 @@ export default function NearbyPlaceForm({
         <button
           type="submit"
           disabled={saving}
-          className="px-8 py-3.5 bg-[#A67C00] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
+          className="px-8 py-3.5 bg-[#02210a] hover:bg-[#C9960C] disabled:opacity-50 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all duration-300"
         >
           {saving ? "Saving…" : mode === "create" ? "Add Place" : "Save Changes"}
         </button>
@@ -213,7 +213,7 @@ function Field({ label, children, required }: { label: string; children: React.R
   return (
     <div>
       <label className="block text-[10px] uppercase tracking-[0.35em] text-white/40 mb-2">
-        {label}{required && <span className="text-[#A67C00] ml-1">*</span>}
+        {label}{required && <span className="text-[#02210a] ml-1">*</span>}
       </label>
       {children}
     </div>
@@ -230,7 +230,7 @@ function Input({ value, onChange, placeholder, required }: {
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       required={required}
-      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 focus:ring-1 focus:ring-[#A67C00]/20 transition-all"
+      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 focus:ring-1 focus:ring-[#02210a]/20 transition-all"
     />
   );
 }
@@ -245,7 +245,7 @@ function Textarea({ value, onChange, rows = 3, placeholder, required }: {
       rows={rows}
       placeholder={placeholder}
       required={required}
-      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#A67C00]/60 focus:ring-1 focus:ring-[#A67C00]/20 transition-all resize-none"
+      className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[#02210a]/60 focus:ring-1 focus:ring-[#02210a]/20 transition-all resize-none"
     />
   );
 }

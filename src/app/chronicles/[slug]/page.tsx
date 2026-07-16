@@ -21,7 +21,7 @@ export default async function ChronicleArticlePage({ params }: Props) {
         {/* Navigation */}
         <Link 
           href="/chronicles"
-          className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-black/40 hover:text-[#A67C00] transition-colors mb-16"
+          className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-black/40 hover:text-[#02210a] transition-colors mb-16"
         >
           <ArrowLeft size={14} /> Back to Archives
         </Link>
@@ -29,7 +29,7 @@ export default async function ChronicleArticlePage({ params }: Props) {
         {/* Article Header */}
         <div className="space-y-8 mb-16">
            <div className="flex items-center gap-4">
-              <span className="px-4 py-1.5 rounded-full bg-[#A67C00] text-white text-[9px] font-black uppercase tracking-widest text-[#F5F1E8]">
+              <span className="px-4 py-1.5 rounded-full bg-[#02210a] text-white text-[9px] font-black uppercase tracking-widest text-[#F5F1E8]">
                 {article.category}
               </span>
               <span className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-black/30">
@@ -66,7 +66,7 @@ export default async function ChronicleArticlePage({ params }: Props) {
              if (paragraph.startsWith('###')) {
                return <h3 key={i} className="text-3xl font-serif font-black text-black pt-8 border-t border-black/5">{paragraph.replace('### ', '')}</h3>
              }
-             return <p key={i} className="text-xl font-serif leading-relaxed italic first-letter:text-4xl first-letter:font-black first-letter:text-[#A67C00]">
+             return <p key={i} className="text-xl font-serif leading-relaxed italic first-letter:text-4xl first-letter:font-black first-letter:text-[#02210a]">
                {paragraph}
              </p>
            })}

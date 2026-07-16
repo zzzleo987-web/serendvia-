@@ -25,13 +25,13 @@ export default function DestinationChronicles({
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-4 text-[#A67C00]"
+                className="flex items-center gap-4 text-[#02210a]"
               >
                  <BookOpen size={16} />
                  <span className="text-[10px] font-black uppercase tracking-[0.5em]">The Recorded Legacy</span>
               </motion.div>
               <h2 className="text-5xl md:text-7xl font-serif font-black text-black tracking-tighter">
-                {destinationName}&apos;s <span className="italic font-light text-[#A67C00]">Chronicles.</span>
+                {destinationName}&apos;s <span className="italic font-light text-[#02210a]">Chronicles.</span>
               </h2>
            </div>
            
@@ -68,7 +68,7 @@ export default function DestinationChronicles({
                 </div>
 
                 <div className="w-full md:w-1/2 space-y-6">
-                   <h3 className="text-3xl lg:text-4xl font-serif font-black text-black leading-tight group-hover:text-[#A67C00] transition-colors">
+                   <h3 className="text-3xl lg:text-4xl font-serif font-black text-black leading-tight group-hover:text-[#02210a] transition-colors">
                      {article.title}
                    </h3>
                    <p className="text-base text-black/50 font-serif italic italic leading-relaxed">
@@ -77,10 +77,10 @@ export default function DestinationChronicles({
                    <div className="pt-4 flex items-center gap-6">
                       <Link 
                         href={`/chronicles/${article.slug}`}
-                        className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-[#A67C00] group/link"
+                        className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-[#02210a] group/link"
                       >
                         Read Chapter 
-                        <span className="w-8 h-px bg-[#A67C00] transition-all group-hover/link:w-12" />
+                        <span className="w-8 h-px bg-[#02210a] transition-all group-hover/link:w-12" />
                         <ArrowUpRight size={14} />
                       </Link>
                    </div>

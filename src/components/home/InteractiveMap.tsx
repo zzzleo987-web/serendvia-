@@ -138,9 +138,9 @@ export default function InteractiveMap() {
     className: "custom-div-icon",
     html: `
       <div class="relative flex items-center justify-center">
-        <div class="absolute w-12 h-12 bg-[#D4AF37] opacity-20 rounded-full animate-ping" style="animation-duration: 3s"></div>
-        <div class="absolute w-6 h-6 bg-[#D4AF37] opacity-40 rounded-full animate-pulse"></div>
-        <div class="w-3 h-3 bg-[#D4AF37] rounded-full border-2 border-white shadow-[0_0_15px_#D4AF37]"></div>
+        <div class="absolute w-12 h-12 bg-[#007a27] opacity-20 rounded-full animate-ping" style="animation-duration: 3s"></div>
+        <div class="absolute w-6 h-6 bg-[#007a27] opacity-40 rounded-full animate-pulse"></div>
+        <div class="w-3 h-3 bg-[#007a27] rounded-full border-2 border-white shadow-[0_0_15px_#007a27]"></div>
       </div>
     `,
     iconSize: [40, 40],
@@ -152,7 +152,7 @@ export default function InteractiveMap() {
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-10 flex items-center justify-between">
           <div>
-            <p className="text-[9px] uppercase tracking-[0.5em] text-[#D4AF37] font-black mb-1">Atlas V2.0</p>
+            <p className="text-[9px] uppercase tracking-[0.5em] text-[#007a27] font-black mb-1">Atlas V2.0</p>
             <h2 className="text-3xl font-serif font-black text-white">Region Explorer</h2>
           </div>
           <div className="hidden md:flex gap-2">
@@ -161,7 +161,7 @@ export default function InteractiveMap() {
                 key={spot.id}
                 onClick={() => setActiveSpot(spot)}
                 className={`px-4 py-1.5 rounded-full text-[8px] font-black uppercase tracking-widest transition-all ${
-                  activeSpot.id === spot.id ? "bg-[#D4AF37] text-black" : "bg-white/5 text-white/30 hover:bg-white/10"
+                  activeSpot.id === spot.id ? "bg-[#007a27] text-black" : "bg-white/5 text-white/30 hover:bg-white/10"
                 }`}
               >
                 {spot.name}
@@ -212,13 +212,13 @@ export default function InteractiveMap() {
              <div className="absolute bottom-6 right-6 z-30 flex gap-2">
                 <button 
                   onClick={() => setCurrentZoom(prev => Math.min(prev + 1, 12))}
-                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/20 hover:text-[#D4AF37] backdrop-blur-md pointer-events-auto"
+                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/20 hover:text-[#007a27] backdrop-blur-md pointer-events-auto"
                 >
                   <Plus size={16} />
                 </button>
                 <button 
                   onClick={() => setCurrentZoom(prev => Math.max(prev - 1, 7))}
-                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/20 hover:text-[#D4AF37] backdrop-blur-md pointer-events-auto"
+                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/20 hover:text-[#007a27] backdrop-blur-md pointer-events-auto"
                 >
                   <Minus size={16} />
                 </button>
@@ -239,14 +239,14 @@ export default function InteractiveMap() {
                   <div className="flex justify-between items-start mb-6">
                     <h3 className="text-3xl font-serif font-black text-white">{activeSpot.name}</h3>
                     <div className="text-right">
-                       <p className="text-xl font-serif font-black text-[#D4AF37]">${activeSpot.price}</p>
+                       <p className="text-xl font-serif font-black text-[#007a27]">${activeSpot.price}</p>
                     </div>
                   </div>
 
                   <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
-                    <Image src={activeSpot.image} alt={activeSpot.name} fill className="object-cover" />
+                    <Image src={activeSpot.image} alt={activeSpot.name} fill className="object-cover" sizes="(max-width: 1199px) 100vw, 426px" quality={70} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <span className="absolute bottom-3 left-4 text-[8px] uppercase tracking-[0.4em] text-[#D4AF37] font-black">{activeSpot.category}</span>
+                    <span className="absolute bottom-3 left-4 text-[8px] uppercase tracking-[0.4em] text-[#007a27] font-black">{activeSpot.category}</span>
                   </div>
 
                   <p className="text-sm font-serif italic text-white/40 leading-relaxed mb-8">
@@ -256,7 +256,7 @@ export default function InteractiveMap() {
 
                 <Link 
                   href={`/packages/${activeSpot.packageId}`}
-                  className="flex items-center justify-between w-full p-5 bg-[#D4AF37] hover:bg-white text-black text-[9px] font-black uppercase tracking-[0.3em] rounded-2xl transition-all group"
+                  className="flex items-center justify-between w-full p-5 bg-[#007a27] hover:bg-white text-black text-[9px] font-black uppercase tracking-[0.3em] rounded-2xl transition-all group"
                 >
                   Explore Package
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

@@ -48,7 +48,7 @@ export default async function PackageDetailPage(
               </Link>
             </div>
             {pkg.badge && (
-              <span className="inline-block px-4 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest bg-[#A67C00] text-white mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest bg-[#02210a] text-white mb-4">
                 {pkg.badge}
               </span>
             )}
@@ -92,8 +92,8 @@ export default async function PackageDetailPage(
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {pkg.highlights.map((h, i) => (
                   <div key={i} className="flex items-start gap-3 bg-white/[0.02] border border-white/5 rounded-xl p-4">
-                    <div className="w-5 h-5 rounded-full bg-[#A67C00]/20 border border-[#A67C00]/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#A67C00]" />
+                    <div className="w-5 h-5 rounded-full bg-[#02210a]/20 border border-[#02210a]/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#02210a]" />
                     </div>
                     <span className="text-sm text-white/60">{h}</span>
                   </div>
@@ -107,7 +107,7 @@ export default async function PackageDetailPage(
               <div className="space-y-2">
                 {pkg.included.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <svg className="w-4 h-4 text-[#A67C00] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-[#02210a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-sm text-white/50">{item}</span>
@@ -149,7 +149,7 @@ export default async function PackageDetailPage(
 
                 <a
                   href="mailto:hello@serendivia.com"
-                  className="block w-full py-4 bg-[#A67C00] hover:bg-[#C9960C] text-white text-[11px] font-bold uppercase tracking-[0.3em] text-center rounded-full transition-all duration-300 shadow-lg shadow-[#A67C00]/20 hover:shadow-[#A67C00]/40"
+                  className="block w-full py-4 bg-[#02210a] hover:bg-[#C9960C] text-white text-[11px] font-bold uppercase tracking-[0.3em] text-center rounded-full transition-all duration-300 shadow-lg shadow-[#02210a]/20 hover:shadow-[#02210a]/40"
                 >
                   Book This Journey
                 </a>
